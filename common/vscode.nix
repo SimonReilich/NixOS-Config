@@ -6,6 +6,7 @@
       vscodeExtensions = with vscode-extensions; [
         bbenoist.nix
         brettm12345.nixfmt-vscode
+        piousdeer.adwaita-theme
         james-yu.latex-workshop
       ];
     })
