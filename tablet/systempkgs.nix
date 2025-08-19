@@ -9,8 +9,13 @@
   environment.systemPackages = with pkgs; [
     # Gnome
     gnomeExtensions.app-hider
+    gnomeExtensions.appindicator
     gnomeExtensions.blur-my-shell
+    gnomeExtensions.forge
+    gnomeExtensions.gsconnect
     gnomeExtensions.rounded-window-corners-reborn
+    gnomeExtensions.pipewire-settings
+    gnome-tweaks
 
     # Languages
     jdk21_headless
@@ -24,6 +29,7 @@
     # System
     libwacom-surface
     linux-firmware
+    pipewire
   ];
 
   programs.java.enable = true;
