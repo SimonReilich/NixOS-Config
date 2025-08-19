@@ -30,6 +30,10 @@
     jetbrains.clion
     nixfmt-rfc-style
 
+    # gaming
+    cartridges
+    modrinth-app
+
     # Utility
     binary
     eyedropper
