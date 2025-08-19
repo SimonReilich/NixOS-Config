@@ -6,5 +6,6 @@
     ocaml
     opam
     ocamlPackages.ocamlformat
+    ocamlPackages.ocaml-lsp
   ];
 }
