@@ -14,7 +14,6 @@
     gnomeExtensions.forge
     gnomeExtensions.gsconnect
     gnomeExtensions.rounded-window-corners-reborn
-    gnome-tweaks
 
     # Languages
     jdk21_headless
