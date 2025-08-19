@@ -6,7 +6,7 @@
     ./git.nix
     ./gnome.nix
     ./local.nix
-    ./networking
+    ./networking.nix
     ./printing.nix
     ./sound.nix
     ./systempkgs.nix
