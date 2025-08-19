@@ -14,7 +14,6 @@
     gnomeExtensions.forge
     gnomeExtensions.gsconnect
     gnomeExtensions.rounded-window-corners-reborn
-    gnomeExtensions.pipewire-settings
     gnome-tweaks
 
     # Languages
@@ -29,7 +28,6 @@
     # System
     libwacom-surface
     linux-firmware
-    pipewire
   ];
 
   programs.java.enable = true;

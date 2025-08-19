@@ -10,6 +10,7 @@
     video-trimmer
 
     # Info & Entertainment
+    firefox
     spotify
     wike
 
@@ -46,7 +47,6 @@
 
     # Customization
     addwater
-    bibata-cursors
   ];
 
   # Install firefox.
