@@ -8,7 +8,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # Languages
-    perl
     jdk21_headless
 
     # Development Tools
@@ -16,7 +15,7 @@
     gh
 
     # Other
-    miktex
+    texliveFull
   ];
 
   programs.java.enable = true;
