@@ -4,6 +4,7 @@
   users.users.simonr.packages = with pkgs; [
     # Editors and Viewers
     apostrophe
+    miktex
     obsidian
     onlyoffice-desktopeditors
     switcheroo
@@ -29,6 +30,7 @@
     jetbrains.idea-ultimate
     jetbrains.clion
     nixfmt-rfc-style
+    perl
 
     # gaming
     cartridges
