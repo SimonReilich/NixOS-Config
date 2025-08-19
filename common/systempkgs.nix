@@ -8,11 +8,15 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # Languages
+    perl
     jdk21_headless
 
     # Development Tools
     gnumake
     gh
+
+    # Other
+    miktex
   ];
 
   programs.java.enable = true;
