@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    dune_3
     ocaml
     opam
     ocamlPackages.ocamlformat
