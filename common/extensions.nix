@@ -8,10 +8,5 @@
     forge
     gsconnect
     rounded-window-corners-reborn
-
-    gnome-control-center
-    gnome-tweaks
-
-    adw-gtk3
   ];
 }
