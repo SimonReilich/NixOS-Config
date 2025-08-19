@@ -11,12 +11,21 @@
       nixos-hardware,
     }:
     {
-      nixosConfigurations.tablet = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./tablet.nix
-          nixos-hardware.nixosModules.microsoft-surface-pro-intel
-        ];
+      nixosConfigurations = {
+        desktop = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./desktop.nix
+          ];
+        };
+
+        tablet = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./tablet.nix
+            nixos-hardware.nixosModules.microsoft-surface-pro-intel
+          ];
+        };
       };
     };
 }
