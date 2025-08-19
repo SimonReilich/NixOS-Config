@@ -29,12 +29,6 @@
     jetbrains.idea-ultimate
     jetbrains.clion
     nixfmt-rfc-style
-    (vscode-with-extensions.override {
-      vscodeExtensions = with vscode-extensions; [
-        bbenoist.nix
-        brettm12345.nixfmt-vscode
-      ];
-    })
 
     # Utility
     binary
