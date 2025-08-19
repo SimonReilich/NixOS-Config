@@ -1,10 +1,7 @@
 {
   imports = [
-    ./boot.nix
-    ./desktop.nix
+    ./gnome.nix
     ./networking.nix
-    ./printing.nix
-    ./sound.nix
     ./systempkgs.nix
   ];
 }
