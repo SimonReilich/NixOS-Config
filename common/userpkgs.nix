@@ -32,7 +32,6 @@
 
     # Utility
     binary
-    emblem
     eyedropper
     gnome-decoder
     gnome-graphs

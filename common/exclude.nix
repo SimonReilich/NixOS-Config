@@ -8,6 +8,7 @@
     seahorse
     snapshot
 
+    gnome-music
     gnome-maps
     gnome-tour
     gnome-weather
