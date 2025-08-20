@@ -8,4 +8,8 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
+
+  environment.systemPackages = with pkgs.gnomeExtensions; [
+    touchup
+  ];
 }

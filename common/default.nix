@@ -2,7 +2,6 @@
   imports = [
     ./boot.nix
     ./exclude.nix
-    ./extensions.nix
     ./git.nix
     ./gnome.nix
     ./local.nix
