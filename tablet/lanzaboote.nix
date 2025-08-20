@@ -1,8 +1,15 @@
-{ config, pkgs, ... }:
-
+{ pkgs, lib, ... }:
+let
+  sources = import ./nix/sources.nix;
+  lanzaboote = import sources.lanzaboote;
+in
 {
-  # Bootloader.
-  boot.loader.efi.canTouchEfiVariables = true;
+  imports = [ lanzaboote.nixosModules.lanzaboote ];
+
+  environment.systemPackages = [
+    # For debugging and troubleshooting Secure Boot.
+    pkgs.sbctl
+  ];
 
   # Lanzaboote currently replaces the systemd-boot module.
   # This setting is usually set to true in configuration.nix
