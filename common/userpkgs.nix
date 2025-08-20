@@ -7,7 +7,6 @@
     obsidian
     onlyoffice-desktopeditors
     switcheroo
-    texstudio
     video-trimmer
 
     # Info & Entertainment
