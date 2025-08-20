@@ -14,7 +14,6 @@
     blur-my-shell
     forge
     gsconnect
-    quick-settings-audio-panel
     rounded-window-corners-reborn
   ];
 }
