@@ -10,8 +10,6 @@
     # System
     libwacom-surface
     linux-firmware
-    niv
-    sbctl
   ];
 
   programs.java.enable = true;
