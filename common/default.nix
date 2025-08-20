@@ -1,6 +1,5 @@
 {
   imports = [
-    ./boot.nix
     ./exclude.nix
     ./git.nix
     ./gnome.nix
