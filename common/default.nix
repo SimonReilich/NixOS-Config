@@ -6,7 +6,6 @@
     ./gnome.nix
     ./local.nix
     ./networking.nix
-    ./ocaml.nix
     ./printing.nix
     ./sound.nix
     ./systempkgs.nix
