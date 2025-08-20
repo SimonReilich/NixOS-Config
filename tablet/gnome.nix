@@ -10,6 +10,7 @@
   services.libinput.enable = true;
 
   environment.systemPackages = with pkgs.gnomeExtensions; [
+    hibernate-status-button
     touchup
   ];
 }
