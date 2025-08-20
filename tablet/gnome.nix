@@ -11,7 +11,6 @@
 
   environment.systemPackages = with pkgs.gnomeExtensions; [
     hibernate-status-button
-    one-window-wonderland
     touchup
   ];
 }
