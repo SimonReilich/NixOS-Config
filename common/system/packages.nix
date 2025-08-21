@@ -7,7 +7,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+
     # Languages
+    gcc
     jdk21_headless
 
     # Development Tools
