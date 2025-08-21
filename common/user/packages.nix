@@ -10,6 +10,7 @@
     video-trimmer
 
     # Info & Entertainment
+    chromium
     firefox
     spotify
     wike
