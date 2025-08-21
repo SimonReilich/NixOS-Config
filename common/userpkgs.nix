@@ -41,6 +41,7 @@
     gnome-graphs
     gnome-solanum
     hieroglyphic
+    stow
 
     # Customization
     addwater
