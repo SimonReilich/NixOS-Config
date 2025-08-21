@@ -1,8 +1,8 @@
 {
   imports = [
     ./gnome.nix
+    ./home.nix
     ./networking.nix
-    ./systempkgs.nix
-    ./user.nix
+    ./packages.nix
   ];
 }

@@ -8,8 +8,7 @@
     ./networking.nix
     ./printing.nix
     ./sound.nix
-    ./systempkgs.nix
-    ./userpkgs.nix
+    ./packages.nix
     ./vscode.nix
   ];
 }

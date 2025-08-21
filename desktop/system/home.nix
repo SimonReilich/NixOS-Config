@@ -22,9 +22,16 @@ in
   };
 
   home-manager.users.simonr =
-    { pkgs, ... }:
+    { config, pkgs, ... }:
 
     {
+      nixpkgs = {
+        config = {
+          allowUnfree = true;
+          allowUnfreePredicate = (_: true);
+        };
+      };
+
       imports = [
         ../../common/user
         ../user

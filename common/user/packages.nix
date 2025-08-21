@@ -1,7 +1,7 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  users.users.simonr.packages = with pkgs; [
+  home.packages = with pkgs; [
     # Editors and Viewers
     apostrophe
     obsidian
@@ -49,6 +49,5 @@
     gnome-tweaks
   ];
 
-  # Install firefox.
   programs.firefox.enable = true;
 }
