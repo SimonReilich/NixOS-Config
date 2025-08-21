@@ -6,7 +6,7 @@
       vscodeExtensions = with vscode-extensions; [
         bbenoist.nix
         brettm12345.nixfmt-vscode
-        ocamllabs.ocaml-platform
+        myriad-dreamin.tinymist
         piousdeer.adwaita-theme
         james-yu.latex-workshop
       ];

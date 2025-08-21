@@ -16,6 +16,8 @@
 
     # Other
     texliveFull
+    typst
+    typstyle
   ];
 
   programs.java.enable = true;
