@@ -5,8 +5,9 @@
         enable = true;
         viAlias = true;
         vimAlias = true;
-        plugins = [
-
+        extraPackages = with pkgs.vimPlugins; [
+            catppuccin-nvim
+            nvchad
         ];
     };
 }
