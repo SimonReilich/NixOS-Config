@@ -9,7 +9,11 @@
     ./system
   ];
 
-  users.users.simonr.isNormalUser = true;
+  users.users.simonr = {
+    isNormalUser = true;
+    home = "/home/simonr";
+    extraGroups = [ "wheel" "networkmanager" ];
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
