@@ -12,7 +12,9 @@
     bashrcExtra = ''
       if [ -z "$TMUX" ] && [ '$'{UID} != 0 ]
       then
-          tmux new-session -A -s main
+          tmux new-session -A -d -s main;
+          tmux send 'fastfetch' ENTER;
+          tmux a;
       fi
     '';
   };
