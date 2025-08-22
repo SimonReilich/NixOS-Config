@@ -8,6 +8,7 @@
     prefix = "C-Space";
     plugins = with pkgs.tmuxPlugins; [
       better-mouse-mode
+      catppuccin
       vim-tmux-navigator
     ];
     extraConfig = ''
@@ -15,8 +16,6 @@
 
       bind -n M-H previous-window
       bind -n M-L next-window
-
-      set -g @plugin 'dreamsofcode-io/catppuccin-tmux'
     '';
   };
 }
