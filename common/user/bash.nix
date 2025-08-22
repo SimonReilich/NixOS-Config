@@ -10,7 +10,10 @@
   programs.bash = {
     enable = true;
     bashrcExtra = ''
-        tmux new-session -A -s main
+      if [ -z "$TMUX" ] && [ '$'{UID} != 0 ]
+      then
+          tmux new-session -A -s main
+      fi
     '';
   };
 }
