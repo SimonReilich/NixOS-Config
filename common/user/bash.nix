@@ -7,5 +7,10 @@
     pkgs.nerd-fonts.adwaita-mono
   ];
 
-  programs.bash.enable = true;
+  programs.bash = {
+    enable = true;
+    bashrcExtra = ''
+        tmux new-session -A -s main
+    '';
+  };
 }
