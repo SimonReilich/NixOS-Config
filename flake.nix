@@ -15,14 +15,14 @@
         desktop = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./desktop.nix
+            ./desktop/desktop.nix
           ];
         };
 
         tablet = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./tablet.nix
+            ./tablet/tablet.nix
             nixos-hardware.nixosModules.microsoft-surface-pro-intel
           ];
         };
