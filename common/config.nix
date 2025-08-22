@@ -12,7 +12,10 @@
   users.users.simonr = {
     isNormalUser = true;
     home = "/home/simonr";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ];
   };
 
   # This value determines the NixOS release from which the default
