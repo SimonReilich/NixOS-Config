@@ -13,7 +13,7 @@
     extraConfig = ''
       set-option -sa terminal-overrides ",xterm*:Tc"
 
-      bind -n M-H previouse-window
+      bind -n M-H previous-window
       bind -n M-L next-window
 
       set -g @plugin 'dreamsofcode-io/catppuccin-tmux'
