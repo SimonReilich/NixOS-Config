@@ -13,6 +13,7 @@
     ];
     extraConfig = ''
       set-option -sa terminal-overrides ",xterm*:Tc"
+      set -g mouse on
 
       bind -n M-H previous-window
       bind -n M-L next-window
