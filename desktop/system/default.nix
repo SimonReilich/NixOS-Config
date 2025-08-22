@@ -1,7 +1,6 @@
 {
-    imports = [
-        ./home.nix
-        ./networking.nix
-        ./packages.nix
-    ];
+  imports = [
+    ./networking.nix
+    ./packages.nix
+  ];
 }

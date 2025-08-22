@@ -6,7 +6,7 @@
   home.packages = [
     pkgs.nerd-fonts.adwaita-mono
   ];
-  
+
   programs.neovim = {
     enable = true;
     viAlias = true;

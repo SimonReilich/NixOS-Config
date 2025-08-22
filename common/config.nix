@@ -5,13 +5,11 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ 
+  imports = [
     ./system
-    ../common/system
-
-    # Include the results of the hardware scan.
-    ./desktop-hardware.nix
   ];
+
+  users.users.simonr.isNormalUser = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -21,8 +19,8 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = [ 
-    "nix-command" 
-    "flakes" 
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
   ];
 }
