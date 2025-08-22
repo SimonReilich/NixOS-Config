@@ -6,6 +6,7 @@
     shell = "${pkgs.bash}/bin/bash";
     sensibleOnTop = true;
     prefix = "C-Space";
+    mouse = true;
     plugins = with pkgs.tmuxPlugins; [
       better-mouse-mode
       catppuccin
