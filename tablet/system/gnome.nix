@@ -12,5 +12,6 @@
   environment.systemPackages = with pkgs.gnomeExtensions; [
     hibernate-status-button
     touchup
+    x11-gestures
   ];
 }
