@@ -19,5 +19,6 @@
     gsconnect
     quick-settings-audio-panel
     rounded-window-corners-reborn
+    user-themes
   ];
 }
