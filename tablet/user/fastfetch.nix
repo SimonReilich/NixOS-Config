@@ -6,6 +6,9 @@
     settings = {
       logo = {
         source = "NixOS";
+        padding = {
+          left = 2;
+        };
       };
       display = {
         color = "blue";

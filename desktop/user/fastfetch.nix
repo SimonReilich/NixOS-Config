@@ -6,6 +6,9 @@
     settings = {
       logo = {
         source = "NixOS";
+        padding = {
+          left = 2;
+        };
       };
       display = {
         color = "blue";
@@ -24,6 +27,7 @@
         "shell"
         "editor"
         "de"
+        "wm"
         "break"
         "cpu"
         "gpu"
