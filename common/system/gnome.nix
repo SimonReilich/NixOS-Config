@@ -17,7 +17,6 @@
     clipboard-history
     forge
     gsconnect
-    just-perfection
     night-theme-switcher
     quick-settings-audio-panel
     rounded-window-corners-reborn
