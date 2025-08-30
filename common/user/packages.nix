@@ -21,6 +21,7 @@
     zulip
 
     # Creative
+    figma-linux
     musescore
 
     # Development
