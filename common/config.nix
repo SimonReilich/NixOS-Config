@@ -7,6 +7,7 @@
 {
   imports = [
     ./system
+    ./style.nix
   ];
 
   users.users.simonr = {

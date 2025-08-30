@@ -4,6 +4,8 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    stylix.url = "github:nix-community/stylix/release-25.05";
+    stylix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -12,6 +14,7 @@
       nixpkgs,
       nixos-hardware,
       home-manager,
+      stylix,
     }:
     {
       nixosConfigurations = {
@@ -26,6 +29,7 @@
               home-manager.backupFileExtension = "backup";
               home-manager.users.simonr = import ./desktop/desktop-home.nix;
             }
+            stylix.nixosModules.stylix
           ];
         };
 
@@ -40,6 +44,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.simonr = import ./tablet/tablet-home.nix;
             }
+            stylix.nixosModules.stylix
           ];
         };
       };
