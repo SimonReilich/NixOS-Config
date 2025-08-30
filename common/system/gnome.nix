@@ -11,6 +11,7 @@
   fonts.fontDir.enable = true;
 
   environment.systemPackages = with pkgs.gnomeExtensions; [
+    accent-directories
     app-hider
     appindicator
     blur-my-shell
