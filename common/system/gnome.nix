@@ -17,6 +17,7 @@
     clipboard-history
     forge
     gsconnect
+    just-perfection
     quick-settings-audio-panel
     rounded-window-corners-reborn
     user-themes
