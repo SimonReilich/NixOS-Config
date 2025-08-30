@@ -22,8 +22,7 @@
           system = "x86_64-linux";
           modules = [
             ./desktop/desktop-config.nix
-            home-manager.nixosModules.home-manager
-            {
+            home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
@@ -38,10 +37,10 @@
           modules = [
             ./tablet/tablet-config.nix
             nixos-hardware.nixosModules.microsoft-surface-pro-intel
-            home-manager.nixosModules.home-manager
-            {
+            home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
+              home-manager.backupFileExtension = "backup";
               home-manager.users.simonr = import ./tablet/tablet-home.nix;
             }
             stylix.nixosModules.stylix
