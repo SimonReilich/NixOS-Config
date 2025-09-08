@@ -10,7 +10,7 @@
         myriad-dreamin.tinymist
         piousdeer.adwaita-theme
         james-yu.latex-workshop
-        vue.vscode-typescript-vue-plugin
+        vue.volar
       ];
     })
   ];
