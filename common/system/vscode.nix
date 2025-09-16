@@ -8,10 +8,11 @@
         bbenoist.nix
         brettm12345.nixfmt-vscode
         haskell.haskell
+        james-yu.latex-workshop
+        justusadam.language-haskell
         myriad-dreamin.tinymist
         ocamllabs.ocaml-platform
         piousdeer.adwaita-theme
-        james-yu.latex-workshop
         vue.volar
       ];
     })
