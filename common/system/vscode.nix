@@ -7,6 +7,7 @@
         astro-build.astro-vscode
         bbenoist.nix
         brettm12345.nixfmt-vscode
+        haskell.haskell
         myriad-dreamin.tinymist
         ocamllabs.ocaml-platform
         piousdeer.adwaita-theme
