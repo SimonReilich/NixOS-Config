@@ -4,6 +4,7 @@
     ./exclude.nix
     ./git.nix
     ./gnome.nix
+    ./haskell.nix
     ./local.nix
     ./networking.nix
     ./printing.nix
