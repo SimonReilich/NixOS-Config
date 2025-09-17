@@ -14,6 +14,7 @@
     firefox
     spotify
     wike
+    zotero
 
     # Communication
     discord
