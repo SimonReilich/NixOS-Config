@@ -10,6 +10,7 @@
     # System
     libwacom-surface
     linux-firmware
+    mkcert
   ];
 
   programs.java.enable = true;
