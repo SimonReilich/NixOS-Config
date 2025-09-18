@@ -18,6 +18,7 @@
 
     # Other
     texliveFull
+    tex-fmt
     typst
     typstyle
   ];
