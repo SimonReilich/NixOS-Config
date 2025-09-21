@@ -13,6 +13,7 @@
         myriad-dreamin.tinymist
         ocamllabs.ocaml-platform
         piousdeer.adwaita-theme
+        streetsidesoftware.code-spell-checker-german
         vue.volar
       ];
     })
