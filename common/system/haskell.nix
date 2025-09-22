@@ -9,6 +9,7 @@
     haskellPackages.bytestring_0_12_2_0
     haskellPackages.network
     haskellPackages.monad-logger
+    haskellPackages.random
     haskellPackages.snap
     haskellPackages.containers_0_8
     haskellPackages.test-framework
