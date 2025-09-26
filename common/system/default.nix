@@ -8,6 +8,7 @@
     ./local.nix
     ./networking.nix
     ./printing.nix
+    ./python.nix
     ./sound.nix
     ./packages.nix
     ./vscode.nix
