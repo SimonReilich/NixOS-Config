@@ -1,6 +1,7 @@
 {
   imports = [
     ./boot.nix
+    ./eist.nix
     ./exclude.nix
     ./git.nix
     ./gnome.nix
@@ -8,7 +9,6 @@
     ./local.nix
     ./networking.nix
     ./printing.nix
-    ./python.nix
     ./sound.nix
     ./packages.nix
     ./vscode.nix
