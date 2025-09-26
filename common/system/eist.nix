@@ -8,5 +8,8 @@
     ]))
 
     libgcc
+    clang
+
+    docker
   ];
 }
