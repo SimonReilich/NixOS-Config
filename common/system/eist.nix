@@ -11,5 +11,6 @@
     clang
 
     docker
+    docker-compose
   ];
 }
