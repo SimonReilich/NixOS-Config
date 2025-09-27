@@ -10,7 +10,7 @@
 
     # Languages
     gcc
-    jdk21_headless
+    jdk17
 
     # Development Tools
     gnumake
