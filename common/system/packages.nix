@@ -15,6 +15,7 @@
     # Development Tools
     gnumake
     gh
+    rustup
 
     # Other
     texliveFull
