@@ -14,7 +14,7 @@
     haskellPackages.containers_0_8
     haskellPackages.test-framework
     haskellPackages.vector
-    haskellPackages.time_1_14
+    haskellPackages.time_1_15
     haskellPackages.mwc-random
   ];
 }

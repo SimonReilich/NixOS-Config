@@ -1,7 +1,6 @@
 {
   imports = [
     ./boot.nix
-    ./eist.nix
     ./exclude.nix
     ./git.nix
     ./gnome.nix
@@ -11,6 +10,7 @@
     ./printing.nix
     ./sound.nix
     ./packages.nix
+    ./system.nix
     ./vscode.nix
   ];
 }
