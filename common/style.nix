@@ -4,6 +4,8 @@
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/google-dark.yaml";
   stylix.polarity = "dark";
 
+  stylix.targets.qt.enable = false;
+
   stylix.fonts = {
     serif = {
       package = pkgs.lexend;
@@ -21,7 +23,7 @@
     };
 
     emoji = {
-      package = pkgs.noto-fonts-emoji;
+      package = pkgs.noto-fonts-color-emoji;
       name = "Noto Color Emoji";
     };
   };
