@@ -1,3 +1,5 @@
+{ pkgs, hardware, ... }:
+
 {
   imports = [
     ./system
@@ -7,4 +9,6 @@
     # Include the results of the hardware scan.
     ./tablet-hardware.nix
   ];
+
+  hardware.microsoft-surface.kernelVersion = "stable";
 }
