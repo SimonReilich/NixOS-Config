@@ -11,6 +11,5 @@
     ./sound.nix
     ./packages.nix
     ./system.nix
-    ./vscode.nix
   ];
 }

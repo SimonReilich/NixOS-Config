@@ -5,5 +5,6 @@
     ./packages.nix
     ./prompt.nix
     ./tmux.nix
+    ./vscode.nix
   ];
 }

@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  users.users.simonr.packages = with pkgs; [
+  home.packages = with pkgs; [
     (vscode-with-extensions.override {
       vscodeExtensions = with vscode-extensions; [
         astro-build.astro-vscode
