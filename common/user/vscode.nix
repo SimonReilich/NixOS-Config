@@ -19,7 +19,7 @@
         vue.volar
       ];
     })
-  ];
 
-  programs.code-nautilus.enable = true;
+    code-nautilus
+  ];
 }
