@@ -14,6 +14,10 @@
       url = "github:rafaelmardojai/firefox-gnome-theme";
       flake = false;
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -22,8 +26,6 @@
       nixpkgs,
       nixos-hardware,
       home-manager,
-      firefox-addons,
-      firefox-gnome-theme,
       stylix,
       ...
     }@inputs:
