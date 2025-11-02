@@ -8,7 +8,6 @@
     extraPackages = with pkgs.vimPlugins; [
       catppuccin-nvim
       nvchad
-      vim-tmux-navigator
     ];
   };
 }

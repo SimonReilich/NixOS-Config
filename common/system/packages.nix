@@ -10,18 +10,16 @@
 
     # Languages
     gcc
+    rustup
     jdk17
 
     # Development Tools
     gnumake
     gh
-    rustup
 
     # Other
     texliveFull
-    tex-fmt
     typst
-    typstyle
   ];
 
   programs.java.enable = true;

@@ -1,10 +1,9 @@
 {
   imports = [
     ./bash.nix
+    ./firefox.nix
     ./neovim.nix
     ./packages.nix
-    ./prompt.nix
-    ./tmux.nix
     ./vscode.nix
   ];
 }

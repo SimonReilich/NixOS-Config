@@ -11,7 +11,6 @@
 
     # Info & Entertainment
     chromium
-    firefox
     spotify
     wike
     zotero
@@ -32,8 +31,10 @@
     jetbrains.idea-ultimate
     jetbrains.clion
     nixfmt-rfc-style
+    tex-fmt
+    typstyle
 
-    # gaming
+    # Gaming
     cartridges
     modrinth-app
 
@@ -51,6 +52,4 @@
     gnome-control-center
     gnome-tweaks
   ];
-
-  programs.firefox.enable = true;
 }

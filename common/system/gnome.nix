@@ -11,8 +11,6 @@
   fonts.fontDir.enable = true;
 
   environment.systemPackages = with pkgs.gnomeExtensions; [
-    accent-directories
-    app-hider
     appindicator
     blur-my-shell
     clipboard-history
@@ -20,6 +18,5 @@
     gsconnect
     quick-settings-audio-panel
     rounded-window-corners-reborn
-    user-themes
   ];
 }
