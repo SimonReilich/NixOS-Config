@@ -34,10 +34,10 @@
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
               home-manager.users.simonr = import ./desktop/desktop-home.nix;
+              home-manager.extraSpecialArgs = {inherit inputs;};
             }
             stylix.nixosModules.stylix
           ];
-          specialArgs = {inherit inputs;};
         };
 
         tablet = nixpkgs.lib.nixosSystem {
