@@ -16,6 +16,7 @@
       nixpkgs,
       nixos-hardware,
       home-manager,
+      nur,
       stylix,
     }:
     {
