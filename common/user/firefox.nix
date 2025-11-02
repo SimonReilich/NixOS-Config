@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, nur, ... }:
 
 {
   programs.firefox = {
