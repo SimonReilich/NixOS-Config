@@ -69,6 +69,18 @@
             definedAliases = [ "@nw" ];
           };
 
+          translator-de-en = {
+            name = "Google Translate DE -> EN";
+            urls = [ { template = "https://translate.google.com/?hl=de&sl=de&tl=en&text={searchTerms}&op=translate"; } ];
+            definedAliases = [ "@de-en" ];
+          };
+
+          translator-en-de = {
+            name = "Google Translate EN -> DE";
+            urls = [ { template = "https://translate.google.com/?hl=de&sl=en&tl=de&text={searchTerms}&op=translate"; } ];
+            definedAliases = [ "@en-de" ];
+          };
+
           google.metaData.alias = "@g";
         };
       };
