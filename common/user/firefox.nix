@@ -2,15 +2,8 @@
 
 {
   # Add Firefox GNOME theme directory
-  home.file."firefox-gnome-theme" = {
-    target = ".mozilla/firefox/default/chrome/firefox-gnome-theme";
-    source = (
-      fetchTarball {
-        url = "https://github.com/rafaelmardojai/firefox-gnome-theme/archive/master.tar.gz";
-        sha256 = "sha256:1gkfi77n8cn5xzl3wi9mggh7adirjrsnbqygg1mcvjy0ynmd6kfh";
-      }
-    );
-  };
+  home.file.".mozilla/firefox/nix-user-profile/chrome/firefox-gnome-theme".source =
+    inputs.firefox-gnome-theme;
 
   programs.firefox = {
     enable = true;
@@ -30,6 +23,8 @@
 
         "browser.search.region" = "DE";
         "browser.search.isUS" = false;
+        "browser.uidensity" = 0;
+        "browser.theme.dark-private-windows" = false;
         "distribution.searchplugins.defaultLocale" = "de";
         "general.useragent.locale" = "de";
         "browser.bookmarks.showMobileBookmarks" = false;
@@ -102,7 +97,9 @@
       };
       userChrome = ''
         @import "firefox-gnome-theme/userChrome.css";
-        @import "firefox-gnome-theme/theme/colors/dark.css";
+      '';
+      userContent = ''
+        @import "firefox-gnome-theme/userContent.css";
       '';
       isDefault = true;
       extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [

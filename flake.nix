@@ -10,6 +10,10 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    firefox-gnome-theme = {
+      url = "github:rafaelmardojai/firefox-gnome-theme";
+      flake = false;
+    };
   };
 
   outputs =
@@ -19,9 +23,10 @@
       nixos-hardware,
       home-manager,
       firefox-addons,
+      firefox-gnome-theme,
       stylix,
       ...
-    } @ inputs:
+    }@inputs:
     {
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
@@ -34,7 +39,7 @@
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
               home-manager.users.simonr = import ./desktop/desktop-home.nix;
-              home-manager.extraSpecialArgs = {inherit inputs;};
+              home-manager.extraSpecialArgs = { inherit inputs; };
             }
             stylix.nixosModules.stylix
           ];
@@ -51,7 +56,7 @@
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
               home-manager.users.simonr = import ./tablet/tablet-home.nix;
-              home-manager.extraSpecialArgs = {inherit inputs;};
+              home-manager.extraSpecialArgs = { inherit inputs; };
             }
             stylix.nixosModules.stylix
           ];
