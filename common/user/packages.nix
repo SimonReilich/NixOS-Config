@@ -47,7 +47,6 @@
     hieroglyphic
 
     # Customization
-    addwater
     adw-gtk3
     gnome-control-center
     gnome-tweaks

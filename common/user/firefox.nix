@@ -1,6 +1,17 @@
-{ pkgs, nur, ... }:
+{ inputs, pkgs, ... }:
 
 {
+  # Add Firefox GNOME theme directory
+  home.file."firefox-gnome-theme" = {
+    target = ".mozilla/firefox/default/chrome/firefox-gnome-theme";
+    source = (
+      fetchTarball {
+        url = "https://github.com/rafaelmardojai/firefox-gnome-theme/archive/master.tar.gz";
+        sha256 = "sha256:1gkfi77n8cn5xzl3wi9mggh7adirjrsnbqygg1mcvjy0ynmd6kfh";
+      }
+    );
+  };
+
   programs.firefox = {
     enable = true;
     languagePacks = [
@@ -10,6 +21,13 @@
     profiles.simon = {
       name = "simon";
       settings = {
+        "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
+
+        # For Firefox GNOME theme:
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "browser.tabs.drawInTitlebar" = true;
+        "svg.context-properties.content.enabled" = true;
+
         "browser.search.region" = "DE";
         "browser.search.isUS" = false;
         "distribution.searchplugins.defaultLocale" = "de";
@@ -82,14 +100,16 @@
           }
         ];
       };
+      userChrome = ''
+        @import "firefox-gnome-theme/userChrome.css";
+        @import "firefox-gnome-theme/theme/colors/dark.css";
+      '';
       isDefault = true;
-      extensions = {
-        packages = with pkgs.nur.repos.rycee.firefox-addons; [
-          ublock-origin
-          proton-pass
-          zotero-connector
-        ];
-      };
+      extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
+        ublock-origin
+        proton-pass
+        zotero-connector
+      ];
       search = {
         force = true;
         default = "google";
@@ -132,5 +152,30 @@
         };
       };
     };
+    policies = {
+      # Feature Disabling
+      DisableBuiltinPDFViewer = true;
+      DisableFirefoxStudies = true;
+      DisableFirefoxAccounts = true;
+      DisableFirefoxScreenshots = true;
+      DisableForgetButton = true;
+      DisableMasterPasswordCreation = true;
+      DisableProfileImport = true;
+      DisableProfileRefresh = true;
+      DisableSetDesktopBackground = true;
+      DisablePocket = true;
+      DisableTelemetry = true;
+      DisablePasswordReveal = true;
+
+      # Access Restrictions
+      BlockAboutConfig = false;
+      BlockAboutProfiles = true;
+      BlockAboutSupport = true;
+
+      # UI and Behavior
+      OfferToSaveLogins = false;
+    };
   };
+
+  stylix.targets.firefox.profileNames = [ "simon" ];
 }
