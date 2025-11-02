@@ -30,7 +30,7 @@
     jetbrains.pycharm-professional
     jetbrains.idea-ultimate
     jetbrains.clion
-    nixfmt-rfc-style
+    nixfmt-tree
     tex-fmt
     typstyle
 
