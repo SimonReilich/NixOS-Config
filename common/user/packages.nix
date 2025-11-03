@@ -35,6 +35,7 @@
     nixfmt-tree
     tex-fmt
     typstyle
+    godot
 
     # Gaming
     cartridges
