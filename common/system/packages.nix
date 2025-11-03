@@ -20,6 +20,7 @@
     # Other
     texliveFull
     typst
+    host
   ];
 
   programs.java.enable = true;

@@ -10,8 +10,11 @@
     description = "Wait for DNS to come up using 'host'";
     restartIfChanged = false;
     onSuccess = [ "pull-updates.service" ];
+    path = [
+      pkgs.host
+    ];
     script = ''
-      until host github.com; do sleep 1; done
+      until host github.com; do sleep 10; done
     '';
     serviceConfig = {
       PassEnvironment = "DISPLAY";
