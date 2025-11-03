@@ -7,6 +7,7 @@
         astro-build.astro-vscode
         bbenoist.nix
         brettm12345.nixfmt-vscode
+        github.vscode-github-actions
         haskell.haskell
         james-yu.latex-workshop
         justusadam.language-haskell
