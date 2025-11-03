@@ -2,4 +2,5 @@
 
 treefmt *
 sudo nix-channel --update
-exec sudo nixos-rebuild switch --flake .
+sudo nixos-rebuild switch --flake .
+exec git add flake.lock
