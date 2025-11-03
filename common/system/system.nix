@@ -5,7 +5,7 @@
   system.autoUpgrade.allowReboot = true;
   system.autoUpgrade.channel = "https://channels.nixos.org/nixos-unstable";
 
-  systemd.service.wait-for-dns = {
+  systemd.services.wait-for-dns = {
     wantedBy = [ "multi-user.target" ];
     description = "Wait for DNS to come up using 'host'";
     restartIfChanged = false;
