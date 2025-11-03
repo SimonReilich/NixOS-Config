@@ -13,6 +13,7 @@
         myriad-dreamin.tinymist
         ocamllabs.ocaml-platform
         piousdeer.adwaita-theme
+        redhat.java
         rust-lang.rust-analyzer
         streetsidesoftware.code-spell-checker
         streetsidesoftware.code-spell-checker-german
