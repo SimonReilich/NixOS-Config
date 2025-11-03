@@ -23,6 +23,7 @@
     # Creative
     figma-linux
     musescore
+    blender
 
     # Development
     jetbrains.webstorm
