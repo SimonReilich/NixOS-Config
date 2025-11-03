@@ -14,7 +14,7 @@
       pkgs.host
     ];
     script = ''
-      until host github.com; do sleep 10; done
+      until host github.com; do sleep 60; done
     '';
     serviceConfig = {
       PassEnvironment = "DISPLAY";
@@ -35,6 +35,7 @@
     script = ''
       test "$(git branch --show-current)" = "main"
       git pull --ff-only
+      until $(nix-channel --list); do sleep 60; done
     '';
     serviceConfig = {
       PassEnvironment = "DISPLAY";
