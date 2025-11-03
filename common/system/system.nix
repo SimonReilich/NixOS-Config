@@ -5,8 +5,23 @@
   system.autoUpgrade.allowReboot = true;
   system.autoUpgrade.channel = "https://channels.nixos.org/nixos-unstable";
 
-  systemd.services.pull-updates = {
+  systemd.service.wait-for-dns = {
     wantedBy = [ "multi-user.target" ];
+    description = "Wait for DNS to come up using 'host'";
+    restartIfChanged = false;
+    onSuccess = [ "pull-updates.service" ];
+    script = ''
+      until host github.com; do sleep 1; done
+    '';
+    serviceConfig = {
+      PassEnvironment = "DISPLAY";
+      WorkingDirectory = "/home/simonr/.dotfiles";
+      User = "simonr";
+      Type = "oneshot";
+    };
+  };
+
+  systemd.services.pull-updates = {
     description = "Pulls changes to system config";
     restartIfChanged = false;
     onSuccess = [ "rebuild.service" ];
