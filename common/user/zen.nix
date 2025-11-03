@@ -159,5 +159,7 @@
     };
   };
 
-  stylix.targets.zen-browser.profileNames = [ "simon" ];
+  stylix.targets.zen-browser = {
+    enable = false;
+  };
 }
