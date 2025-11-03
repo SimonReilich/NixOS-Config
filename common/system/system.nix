@@ -31,6 +31,7 @@
     path = [
       pkgs.git
       pkgs.openssh
+      pkgs.nix-channel
     ];
     script = ''
       test "$(git branch --show-current)" = "main"
