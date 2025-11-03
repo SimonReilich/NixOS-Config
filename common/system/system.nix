@@ -31,12 +31,10 @@
     path = [
       pkgs.git
       pkgs.openssh
-      pkgs.nix-channel
     ];
     script = ''
       test "$(git branch --show-current)" = "main"
       git pull --ff-only
-      until $(nix-channel --list); do sleep 60; done
     '';
     serviceConfig = {
       PassEnvironment = "DISPLAY";
@@ -54,6 +52,7 @@
       pkgs.systemd
     ];
     script = ''
+      NIX_PATH=/home/simonr/.nix-defexpr/channels:nixpkgs=flake:nixpkgs:/nix/var/nix/profiles/per-user/root/channels
       nixos-rebuild switch
     '';
     serviceConfig.Type = "oneshot";
