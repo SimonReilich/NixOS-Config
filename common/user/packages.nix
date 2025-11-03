@@ -30,6 +30,7 @@
     jetbrains.pycharm-professional
     jetbrains.idea-ultimate
     jetbrains.clion
+    nixfmt
     nixfmt-tree
     tex-fmt
     typstyle
