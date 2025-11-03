@@ -17,6 +17,7 @@
         rust-lang.rust-analyzer
         streetsidesoftware.code-spell-checker
         streetsidesoftware.code-spell-checker-german
+        usernamehw.errorlens
         vue.volar
       ];
     })
