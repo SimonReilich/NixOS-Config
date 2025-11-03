@@ -52,9 +52,13 @@
       pkgs.systemd
     ];
     script = ''
-      NIX_PATH=/home/simonr/.nix-defexpr/channels:nixpkgs=flake:nixpkgs:/nix/var/nix/profiles/per-user/root/channels
-      nixos-rebuild switch
+      nixos-rebuild switch --flake .
     '';
-    serviceConfig.Type = "oneshot";
+    serviceConfig = {
+      PassEnvironment = "DISPLAY";
+      WorkingDirectory = "/home/simonr/.dotfiles";
+      User = "simonr";
+      Type = "oneshot";
+    };
   };
 }
