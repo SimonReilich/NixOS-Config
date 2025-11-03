@@ -46,6 +46,7 @@
     gnome-graphs
     gnome-solanum
     hieroglyphic
+    zoxide
 
     # Customization
     adw-gtk3
