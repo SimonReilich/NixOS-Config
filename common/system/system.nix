@@ -52,12 +52,12 @@
       pkgs.systemd
     ];
     script = ''
-      nixos-rebuild switch --flake .
+      sudo nixos-rebuild switch --flake .
     '';
     serviceConfig = {
       PassEnvironment = "DISPLAY";
       WorkingDirectory = "/home/simonr/.dotfiles";
-      User = "root";
+      User = "simonr";
       Type = "oneshot";
     };
   };
