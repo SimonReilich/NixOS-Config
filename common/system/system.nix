@@ -52,6 +52,7 @@
       pkgs.systemd
     ];
     script = ''
+      nix-collect-garbage --delete-older-than 8d
       nixos-rebuild switch --flake .
     '';
     serviceConfig = {
