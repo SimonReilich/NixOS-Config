@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     # Editors and Viewers
     apostrophe
-    obsidian
     onlyoffice-desktopeditors
     switcheroo
     video-trimmer
