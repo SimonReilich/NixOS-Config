@@ -24,6 +24,7 @@
     figma-linux
     musescore
     blender
+    logseq
 
     # Development
     jetbrains.webstorm
