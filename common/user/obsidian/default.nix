@@ -8,11 +8,10 @@
 {
   programs.obsidian = {
     enable = true;
-    package = pkgs.obsidian;
 
     vaults.Obsidian = {
       enable = true;
-      target = "Documents/Obsidian"; # This would be the default. (Based on the name)
+      target = "Documents/Obsidian";
       settings = {
         communityPlugins = [
           {

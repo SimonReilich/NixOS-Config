@@ -2,7 +2,7 @@
   imports = [
     ./bash.nix
     ./neovim.nix
-    ./obsidian/obsidian.nix
+    ./obsidian
     ./packages.nix
     ./vscode.nix
     ./zen.nix

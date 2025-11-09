@@ -6,7 +6,7 @@
 
 pkgs.stdenv.mkDerivation rec {
   pname = "obsidian.plugins.obsidian-note-linker";
-  version = "1.2.7";
+  version = "1.2.8";
   repo = "https://github.com/AlexW00/obsidian-note-linker";
 
   mainJs = pkgs.fetchurl {
