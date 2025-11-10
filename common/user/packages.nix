@@ -39,7 +39,6 @@
 
     # Gaming
     cartridges
-    modrinth-app
 
     # Utility
     binary
