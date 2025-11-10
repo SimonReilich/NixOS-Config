@@ -10,6 +10,7 @@
 
     # Languages
     gcc15
+    glibc
     rustup
     jdk17
 
