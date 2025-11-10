@@ -39,6 +39,7 @@
 
     # Gaming
     cartridges
+    minecraft
 
     # Utility
     binary
