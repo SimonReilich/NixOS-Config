@@ -9,7 +9,7 @@
   environment.systemPackages = with pkgs; [
 
     # Languages
-    clang
+    gcc15
     rustup
     jdk17
 
