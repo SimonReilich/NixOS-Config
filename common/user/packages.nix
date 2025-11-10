@@ -39,7 +39,7 @@
 
     # Gaming
     cartridges
-    minecraft
+    prismlauncher
 
     # Utility
     binary
