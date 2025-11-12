@@ -14,6 +14,7 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    affinity-nix.url = "github:mrshmllow/affinity-nix";
   };
 
   outputs =
