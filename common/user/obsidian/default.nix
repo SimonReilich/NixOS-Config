@@ -43,6 +43,11 @@
           }
 
           {
+            pkg = pkgs.callPackage ./obsidian-git { };
+            enable = true;
+          }
+
+          {
             pkg = pkgs.callPackage ./obsidian-note-linker { };
             enable = true;
           }
@@ -70,11 +75,6 @@
               "coverImagePath" = "Literatur/Bilder";
               "askForLocale" = true;
             };
-          }
-
-          {
-            pkg = pkgs.callPackage ./remotly-save { };
-            enable = true;
           }
 
           {
