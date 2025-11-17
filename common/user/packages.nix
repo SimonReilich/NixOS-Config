@@ -26,11 +26,6 @@
     inputs.affinity-nix.packages.x86_64-linux.v3
 
     # Development
-    jetbrains.webstorm
-    jetbrains.rust-rover
-    jetbrains.pycharm-professional
-    jetbrains.idea-ultimate
-    jetbrains.clion
     nixfmt
     nixfmt-tree
     tex-fmt
