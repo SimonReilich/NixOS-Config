@@ -31,6 +31,11 @@
       url = "github:mrshmllow/affinity-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    popprotosim-neo = {
+      url = "github:SimonReilich/PopProtoSim-Neo";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

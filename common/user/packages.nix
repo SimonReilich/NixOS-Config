@@ -31,6 +31,7 @@
     tex-fmt
     typstyle
     godot
+    inputs.popprotosim-neo.packages.x86_64-linux.proto-sim
 
     # Gaming
     cartridges
