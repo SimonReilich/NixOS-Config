@@ -13,6 +13,7 @@
     glibc
     rustup
     jdk17
+    nil
 
     # Development Tools
     gnumake
