@@ -1,0 +1,43 @@
+$ sudo nixos-rebuild switch --flake . > SurfaceError.txt
+
+building the system configuration...
+error: Cannot build '/nix/store/959w0iwx3y4bxa31jqzy6iw7shfll2x2-libwacom-surface-2.17.0.drv'.
+       Reason: builder failed with exit code 1.
+       Output paths:
+         /nix/store/2vh21ml8w8jar3c76hfkpv13gl5mjcyx-libwacom-surface-2.17.0
+         /nix/store/p0yirlhpz935n67v5nz19kxibvmzk9y3-libwacom-surface-2.17.0-dev
+       Last 23 log lines:
+       > Using udevCheckHook
+       > Running phase: unpackPhase
+       > unpacking source archive /nix/store/xm690l8445laqfm2rjmkv7wqfllbrmri-source
+       > source root is source
+       > Running phase: patchPhase
+       > applying patch /nix/store/521bcyaw3j4bpm28i5qw1mznwbc68gh7-source/patches/v2/0001-Add-support-for-BUS_VIRTUAL.patch
+       > patching file libwacom/libwacom-database.c
+       > Hunk #1 succeeded at 175 (offset 1 line).
+       > Hunk #2 succeeded at 195 with fuzz 2 (offset 1 line).
+       > patching file libwacom/libwacom.c
+       > Hunk #1 succeeded at 156 (offset 3 lines).
+       > Hunk #2 FAILED at 1013.
+       > 1 out of 2 hunks FAILED -- saving rejects to file libwacom/libwacom.c.rej
+       > patching file libwacom/libwacom.h
+       > Hunk #1 FAILED at 154.
+       > 1 out of 1 hunk FAILED -- saving rejects to file libwacom/libwacom.h.rej
+       > patching file test/test-tablet-validity.c
+       > Hunk #1 FAILED at 177.
+       > 1 out of 1 hunk FAILED -- saving rejects to file test/test-tablet-validity.c.rej
+       > patching file test/test_data_files.py
+       > patching file tools/debug-device.c
+       > Hunk #1 FAILED at 176.
+       > 1 out of 1 hunk FAILED -- saving rejects to file tools/debug-device.c.rej
+       For full logs, run:
+         nix log /nix/store/959w0iwx3y4bxa31jqzy6iw7shfll2x2-libwacom-surface-2.17.0.drv
+error: Cannot build '/nix/store/jq16vcp166j8j1xjmkdwy4zbjgh1l183-system-path.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/l0hgk0a3s2lkdfb4c6k8bcgpyg281jyl-system-path
+error: Cannot build '/nix/store/2lp1w5j4fnb92b9h6n3a29py6yailxij-nixos-system-tablet-26.05.20251127.2fad6ea.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/ibip0aplh6mh7ki67nya2dxmf2p76a2w-nixos-system-tablet-26.05.20251127.2fad6ea
+Command 'nix --extra-experimental-features 'nix-command flakes' build --print-out-paths '.#nixosConfigurations."tablet".config.system.build.toplevel' --no-link' returned non-zero exit status 1.
