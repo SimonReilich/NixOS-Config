@@ -20,9 +20,10 @@
     zulip
 
     # Creative
-    figma-linux
+    penpot-desktop
     musescore
     blender
+    blockbench
     inputs.affinity-nix.packages.x86_64-linux.v3
 
     # Development
