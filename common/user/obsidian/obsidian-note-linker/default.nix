@@ -6,12 +6,12 @@
 
 pkgs.stdenv.mkDerivation rec {
   pname = "obsidian.plugins.obsidian-note-linker";
-  version = "1.2.8";
+  version = "1.2.9";
   repo = "https://github.com/AlexW00/obsidian-note-linker";
 
   mainJs = pkgs.fetchurl {
     url = "${repo}/releases/download/${version}/main.js";
-    sha256 = "sha256-PJtyK5By2kUc+JqGeB5tpj3TuDgFQXeSsXKbck/F7xM=";
+    sha256 = "sha256-SBO/Ti5uiuQTm1L796jfxPzNG6e06bAsefXx2EzZ8rM=";
   };
 
   manifest = pkgs.fetchurl {
