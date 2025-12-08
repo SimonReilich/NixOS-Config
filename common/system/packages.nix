@@ -12,8 +12,6 @@
     gcc15
     glibc
     rustup
-    cargo
-    rustc
     jdk17
     nil
 
