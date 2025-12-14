@@ -46,6 +46,7 @@
     gnome-solanum
     hieroglyphic
     zoxide
+    ffmpeg
 
     # Customization
     adw-gtk3
