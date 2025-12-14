@@ -22,7 +22,7 @@
     # Creative
     penpot-desktop
     musescore
-    blender
+    blender-hip
     blockbench
     inputs.affinity-nix.packages.x86_64-linux.v3
 
