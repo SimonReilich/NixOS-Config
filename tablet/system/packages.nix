@@ -12,6 +12,4 @@
     linux-firmware
     mkcert
   ];
-
-  programs.java.enable = true;
 }
