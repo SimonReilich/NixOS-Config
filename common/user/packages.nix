@@ -45,7 +45,6 @@
     gnome-graphs
     gnome-solanum
     hieroglyphic
-    zoxide
     ffmpeg
 
     # Customization

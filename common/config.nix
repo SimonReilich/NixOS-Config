@@ -17,7 +17,11 @@
       "wheel"
       "networkmanager"
     ];
+    shell = pkgs.zsh;
   };
+
+  # Prevent the new user dialog in zsh
+  system.userActivationScripts.zshrc = "touch .zshrc";
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
