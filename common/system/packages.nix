@@ -22,7 +22,11 @@
     # Other
     texliveFull
     typst
-    host
+    fzf
+    direnv
+    jless
+    bat
+    wl-clipboard
   ];
 
   programs.java.enable = true;

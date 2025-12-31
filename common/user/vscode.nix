@@ -10,7 +10,9 @@
         github.vscode-github-actions
         haskell.haskell
         james-yu.latex-workshop
+        jnoortheen.nix-ide
         justusadam.language-haskell
+        mkhl.direnv
         myriad-dreamin.tinymist
         ocamllabs.ocaml-platform
         piousdeer.adwaita-theme
