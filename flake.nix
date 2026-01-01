@@ -13,6 +13,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v1.0.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixpkgs-lib = {
       url = "github:nix-community/nixpkgs.lib";
     };
@@ -91,6 +96,7 @@
       nixpkgs,
       nixos-hardware,
       home-manager,
+      lanzaboote,
       stylix,
       ...
     }@inputs:
@@ -127,6 +133,7 @@
               home-manager.users.simonr = import ./tablet/tablet-home.nix;
               home-manager.extraSpecialArgs = { inherit inputs; };
             }
+            lanzaboote.nixosModules.lanzaboote
             stylix.nixosModules.stylix
           ];
         };
