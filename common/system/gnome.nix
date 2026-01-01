@@ -15,7 +15,6 @@
     blur-my-shell
     clipboard-history
     gsconnect
-    hide-top-bar
     quick-settings-audio-panel
     rounded-window-corners-reborn
   ];
