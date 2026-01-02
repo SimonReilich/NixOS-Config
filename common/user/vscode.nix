@@ -15,6 +15,7 @@
         mkhl.direnv
         myriad-dreamin.tinymist
         ocamllabs.ocaml-platform
+        oops418.nix-env-picker
         piousdeer.adwaita-theme
         redhat.java
         rust-lang.rust-analyzer
