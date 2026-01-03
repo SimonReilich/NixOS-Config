@@ -33,8 +33,11 @@
     pull-updates = {
       description = "Pulls changes to system config";
       restartIfChanged = false;
-      onSuccess = [ "rebuild.service" ];
-      onFailure = [ "trigger-user-notify.service" ];
+      onSuccess = [
+        "rebuild.service"
+        "trigger-user-notify-update.service"
+      ];
+      onFailure = [ "trigger-user-notify-lock.service" ];
       path = [
         pkgs.git
         pkgs.openssh
@@ -59,6 +62,7 @@
     rebuild = {
       description = "Rebuilds and activates system config";
       restartIfChanged = false;
+      onSuccess = [ "trigger-user-notify-done.service" ];
       path = [
         pkgs.nixos-rebuild
         pkgs.systemd
@@ -74,13 +78,61 @@
       };
     };
 
-    trigger-user-notify = {
-      script = "${pkgs.systemd}/bin/systemctl --machine=simonr@.host --user start notify-change.service";
+    trigger-user-notify-update = {
+      script = "${pkgs.systemd}/bin/systemctl --machine=simonr@.host --user start notify-update.service";
+      serviceConfig.Type = "oneshot";
+    };
+
+    trigger-user-notify-done = {
+      script = "${pkgs.systemd}/bin/systemctl --machine=simonr@.host --user start notify-done.service";
+      serviceConfig.Type = "oneshot";
+    };
+
+    trigger-user-notify-lock = {
+      script = "${pkgs.systemd}/bin/systemctl --machine=simonr@.host --user start notify-lock-change.service";
       serviceConfig.Type = "oneshot";
     };
   };
 
-  systemd.user.services.notify-change = {
+  systemd.user.services.notify-update = {
+    description = "Notifies the user that the system is currently updating in the background";
+    path = [
+      pkgs.libnotify
+      pkgs.systemd
+      pkgs.bash
+    ];
+    script = ''
+      ${pkgs.libnotify}/bin/notify-send \
+        --urgency=normal \
+        -a NixOS \
+        "The remote has changed" \
+        "Updating in the background ..."
+    '';
+    serviceConfig = {
+      Type = "oneshot";
+    };
+  };
+
+  systemd.user.services.notify-done = {
+    description = "Notifies the user that the system is done updating";
+    path = [
+      pkgs.libnotify
+      pkgs.systemd
+      pkgs.bash
+    ];
+    script = ''
+      ${pkgs.libnotify}/bin/notify-send \
+        --urgency=normal \
+        -a NixOS \
+        "Update was succesfull" \
+        "System is now fully available."
+    '';
+    serviceConfig = {
+      Type = "oneshot";
+    };
+  };
+
+  systemd.user.services.notify-lock-change = {
     description = "Notifies the user that flake.lock has changed";
     path = [
       pkgs.libnotify
