@@ -33,23 +33,23 @@
     pull-updates = {
       description = "Pulls changes to system config";
       restartIfChanged = false;
-      onSuccess = [
-        "rebuild.service"
-        "trigger-user-notify-update.service"
-      ];
-      onFailure = [ "trigger-user-notify-lock.service" ];
+      onSuccess = [ "rebuild.service" ];
       path = [
         pkgs.git
         pkgs.openssh
+        pkgs.systemd
       ];
       script = ''
+        git fetch
         test "$(git branch --show-current)" = "main"
         if git diff HEAD..origin/main --name-only | grep flake.lock; then
+          ${pkgs.systemd}/bin/systemctl --machine=simonr@.host --user start notify-lock-change.service
           exit 1
-        else
+        elif git status -sb | grep behind; then
           git pull --ff-only
           exit 0
         fi
+        exit 1
       '';
       serviceConfig = {
         PassEnvironment = "DISPLAY";
@@ -62,13 +62,14 @@
     rebuild = {
       description = "Rebuilds and activates system config";
       restartIfChanged = false;
-      onSuccess = [ "trigger-user-notify-done.service" ];
       path = [
         pkgs.nixos-rebuild
         pkgs.systemd
       ];
       script = ''
+        ${pkgs.systemd}/bin/systemctl --machine=simonr@.host --user start notify-update.service
         nixos-rebuild switch --flake .
+        ${pkgs.systemd}/bin/systemctl --machine=simonr@.host --user start notify-done.service
       '';
       serviceConfig = {
         PassEnvironment = "DISPLAY";
@@ -76,21 +77,6 @@
         User = "root";
         Type = "oneshot";
       };
-    };
-
-    trigger-user-notify-update = {
-      script = "${pkgs.systemd}/bin/systemctl --machine=simonr@.host --user start notify-update.service";
-      serviceConfig.Type = "oneshot";
-    };
-
-    trigger-user-notify-done = {
-      script = "${pkgs.systemd}/bin/systemctl --machine=simonr@.host --user start notify-done.service";
-      serviceConfig.Type = "oneshot";
-    };
-
-    trigger-user-notify-lock = {
-      script = "${pkgs.systemd}/bin/systemctl --machine=simonr@.host --user start notify-lock-change.service";
-      serviceConfig.Type = "oneshot";
     };
   };
 
