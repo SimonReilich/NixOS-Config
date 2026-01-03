@@ -54,6 +54,7 @@
       serviceConfig = {
         PassEnvironment = "DISPLAY";
         WorkingDirectory = "/home/simonr/.dotfiles";
+        SuccessExitStatus = "1";
         User = "simonr";
         Type = "oneshot";
       };
