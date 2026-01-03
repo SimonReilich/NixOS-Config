@@ -28,13 +28,19 @@
     description = "Pulls changes to system config";
     restartIfChanged = false;
     onSuccess = [ "rebuild.service" ];
+    onFailure = [ "notify-change.service" ];
     path = [
       pkgs.git
       pkgs.openssh
     ];
     script = ''
       test "$(git branch --show-current)" = "main"
-      git pull --ff-only
+      if git diff HEAD..origin/main --name-only | grep flake.lock; then
+        exit 1
+      else
+        git pull --ff-only
+        exit 0
+      fi
     '';
     serviceConfig = {
       PassEnvironment = "DISPLAY";
@@ -58,6 +64,24 @@
       PassEnvironment = "DISPLAY";
       WorkingDirectory = "/home/simonr/.dotfiles";
       User = "root";
+      Type = "oneshot";
+    };
+  };
+
+  systemd.services.notify-change = {
+    description = "Notifies the user that flake.lock has changed";
+    restartIfChanged = false;
+    path = [
+      pkgs.libnotify
+    ];
+    script = ''
+      notify-send -A "Open in VSCode" -u critical "flake.lock file was changed, please update manually" -a NixOS
+      code .
+    '';
+    serviceConfig = {
+      PassEnvironment = "DISPLAY";
+      WorkingDirectory = "/home/simonr/.dotfiles";
+      User = "simonr";
       Type = "oneshot";
     };
   };

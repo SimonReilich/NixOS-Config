@@ -110,6 +110,20 @@
             }
             lanzaboote.nixosModules.lanzaboote
             stylix.nixosModules.stylix
+
+            # Fixing broken hidrd-package
+            {
+              nixpkgs.overlays = [
+                (final: prev: {
+                  hidrd = prev.hidrd.overrideAttrs (oldAttrs: {
+                    postPatch = ''
+                      substituteInPlace lib/util/hex.c \
+                        --replace "map[16]" "map[17]"
+                    '';
+                  });
+                })
+              ];
+            }
           ];
         };
       };

@@ -28,6 +28,7 @@
     jless
     bat
     wl-clipboard
+    libnotify
   ];
 
   programs.java.enable = true;
