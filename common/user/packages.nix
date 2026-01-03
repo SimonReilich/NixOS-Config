@@ -9,7 +9,7 @@
     video-trimmer
 
     # Info & Entertainment
-    chromium
+    inputs.helium.defaultPackage.x86_64-linux
     spotify
     wike
     zotero
