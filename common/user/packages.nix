@@ -20,7 +20,6 @@
     zulip
 
     # Creative
-    penpot-desktop
     musescore
     blender-hip
     blockbench
