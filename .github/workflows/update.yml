@@ -1,4 +1,4 @@
-name: "Flake.lock: update Nix dependencies"
+name: "nix flake update"
 
 on:
   workflow_dispatch: # allows manual triggering
