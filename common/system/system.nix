@@ -28,7 +28,7 @@
     description = "Pulls changes to system config";
     restartIfChanged = false;
     onSuccess = [ "rebuild.service" ];
-    onFailure = [ "notify-change.service" ];
+    onFailure = [ "trigger-user-notify.service" ];
     path = [
       pkgs.git
       pkgs.openssh
@@ -68,20 +68,26 @@
     };
   };
 
-  systemd.services.notify-change = {
+  systemd.services.trigger-user-notify = {
+    script = "${pkgs.systemd}/bin/systemctl --machine=simonr@.host --user start notify-change.service";
+    serviceConfig.Type = "oneshot";
+  };
+
+  systemd.user.services.notify-change = {
     description = "Notifies the user that flake.lock has changed";
-    restartIfChanged = false;
     path = [
       pkgs.libnotify
+      pkgs.systemd
+      pkgs.bash
     ];
     script = ''
-      notify-send -A "Open in VSCode" -u critical "flake.lock file was changed, please update manually" -a NixOS
-      code .
+      ${pkgs.libnotify}/bin/notify-send \
+        --urgency=critical \
+        -a NixOS \
+        "flake.lock file was changed" \
+        "Manual update required."
     '';
     serviceConfig = {
-      PassEnvironment = "DISPLAY";
-      WorkingDirectory = "/home/simonr/.dotfiles";
-      User = "simonr";
       Type = "oneshot";
     };
   };
