@@ -620,6 +620,22 @@
         "type": "github"
       }
     },
+    "nvchad": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1753939018,
+        "narHash": "sha256-xdLr6tlU9uA+wu0pqha2br0fdVm+1MjgjbB5awz9ICU=",
+        "owner": "NVChad",
+        "repo": "starter",
+        "rev": "e3572e1f5e1c297212c3deeb17b7863139ce663e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NVChad",
+        "repo": "starter",
+        "type": "github"
+      }
+    },
     "obsidian-plugins": {
       "inputs": {
         "nixpkgs": [
@@ -720,6 +736,7 @@
         "lanzaboote": "lanzaboote",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_3",
+        "nvchad": "nvchad",
         "obsidian-plugins": "obsidian-plugins",
         "popprotosim-neo": "popprotosim-neo",
         "stylix": "stylix",

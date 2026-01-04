@@ -13,6 +13,7 @@
     gcc15
     glibc
     rustup
+    rust-analyzer
     jdk17
     nil
 

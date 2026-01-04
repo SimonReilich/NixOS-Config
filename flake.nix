@@ -57,6 +57,11 @@
       url = "github:SimonReilich/Obsidian-Plugin-Flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nvchad = {
+      url = "github:NVChad/starter";
+      flake = false;
+    };
   };
 
   outputs =
