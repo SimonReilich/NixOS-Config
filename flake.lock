@@ -28,6 +28,22 @@
         "type": "github"
       }
     },
+    "autosuggestions": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1750781703,
+        "narHash": "sha256-KmkXgK1J6iAyb1FtF/gOa0adUnh1pgFsgQOUnNngBaE=",
+        "owner": "zsh-users",
+        "repo": "zsh-autosuggestions",
+        "rev": "85919cd1ffa7d2d5412f6d3fe437ebdbeeec4fc5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zsh-users",
+        "repo": "zsh-autosuggestions",
+        "type": "github"
+      }
+    },
     "base16": {
       "inputs": {
         "fromYaml": "fromYaml"
@@ -93,6 +109,22 @@
         "owner": "tinted-theming",
         "repo": "base16-vim",
         "rev": "577fe8125d74ff456cf942c733a85d769afe58b7",
+        "type": "github"
+      }
+    },
+    "completions": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1766811502,
+        "narHash": "sha256-Bn+x/NS3N4wxP6mYa+jDAxAthaFck8eUndJb4QgnlG0=",
+        "owner": "zsh-users",
+        "repo": "zsh-completions",
+        "rev": "2733ff9818686886352f581620d1ee3b9c8c8072",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zsh-users",
+        "repo": "zsh-completions",
         "type": "github"
       }
     },
@@ -683,7 +715,6 @@
       "inputs": {
         "affinity-nix": "affinity-nix",
         "firefox-addons": "firefox-addons",
-        "fzf-tab": "fzf-tab",
         "helium": "helium",
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
@@ -693,9 +724,7 @@
         "popprotosim-neo": "popprotosim-neo",
         "stylix": "stylix",
         "zen-browser": "zen-browser",
-        "zsh-autosuggestions": "zsh-autosuggestions",
-        "zsh-completions": "zsh-completions",
-        "zsh-syntax-highlighting": "zsh-syntax-highlighting"
+        "zsh-plugins": "zsh-plugins"
       }
     },
     "rust-overlay": {
@@ -750,6 +779,22 @@
       "original": {
         "owner": "nix-community",
         "repo": "stylix",
+        "type": "github"
+      }
+    },
+    "syntax-highlighting": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732201766,
+        "narHash": "sha256-KRsQEDRsJdF7LGOMTZuqfbW6xdV5S38wlgdcCM98Y/Q=",
+        "owner": "zsh-users",
+        "repo": "zsh-syntax-highlighting",
+        "rev": "5eb677bb0fa9a3e60f0eff031dc13926e093df92",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zsh-users",
+        "repo": "zsh-syntax-highlighting",
         "type": "github"
       }
     },
@@ -905,51 +950,24 @@
         "type": "github"
       }
     },
-    "zsh-autosuggestions": {
-      "flake": false,
+    "zsh-plugins": {
+      "inputs": {
+        "autosuggestions": "autosuggestions",
+        "completions": "completions",
+        "fzf-tab": "fzf-tab",
+        "syntax-highlighting": "syntax-highlighting"
+      },
       "locked": {
-        "lastModified": 1750781703,
-        "narHash": "sha256-KmkXgK1J6iAyb1FtF/gOa0adUnh1pgFsgQOUnNngBaE=",
-        "owner": "zsh-users",
-        "repo": "zsh-autosuggestions",
-        "rev": "85919cd1ffa7d2d5412f6d3fe437ebdbeeec4fc5",
+        "lastModified": 1767528483,
+        "narHash": "sha256-cAdfdnivcKykEr9AY8v0yjdyomNm+jVi0+jneljftZE=",
+        "owner": "SimonReilich",
+        "repo": "Zsh-Plugin-Flake",
+        "rev": "d52b657f045bee8227d5f43a7aaf1c2e59200feb",
         "type": "github"
       },
       "original": {
-        "owner": "zsh-users",
-        "repo": "zsh-autosuggestions",
-        "type": "github"
-      }
-    },
-    "zsh-completions": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1766811502,
-        "narHash": "sha256-Bn+x/NS3N4wxP6mYa+jDAxAthaFck8eUndJb4QgnlG0=",
-        "owner": "zsh-users",
-        "repo": "zsh-completions",
-        "rev": "2733ff9818686886352f581620d1ee3b9c8c8072",
-        "type": "github"
-      },
-      "original": {
-        "owner": "zsh-users",
-        "repo": "zsh-completions",
-        "type": "github"
-      }
-    },
-    "zsh-syntax-highlighting": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1732201766,
-        "narHash": "sha256-KRsQEDRsJdF7LGOMTZuqfbW6xdV5S38wlgdcCM98Y/Q=",
-        "owner": "zsh-users",
-        "repo": "zsh-syntax-highlighting",
-        "rev": "5eb677bb0fa9a3e60f0eff031dc13926e093df92",
-        "type": "github"
-      },
-      "original": {
-        "owner": "zsh-users",
-        "repo": "zsh-syntax-highlighting",
+        "owner": "SimonReilich",
+        "repo": "Zsh-Plugin-Flake",
         "type": "github"
       }
     }

@@ -49,24 +49,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    zsh-syntax-highlighting = {
-      url = "github:zsh-users/zsh-syntax-highlighting";
-      flake = false;
-    };
-
-    zsh-completions = {
-      url = "github:zsh-users/zsh-completions";
-      flake = false;
-    };
-
-    zsh-autosuggestions = {
-      url = "github:zsh-users/zsh-autosuggestions";
-      flake = false;
-    };
-
-    fzf-tab = {
-      url = "github:aloxaf/fzf-tab";
-      flake = false;
+    zsh-plugins = {
+      url = "github:SimonReilich/Zsh-Plugin-Flake";
     };
 
     obsidian-plugins = {

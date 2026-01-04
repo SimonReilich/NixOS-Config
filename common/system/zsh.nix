@@ -8,10 +8,10 @@
     syntaxHighlighting.enable = true;
 
     promptInit = ''
-      source ${inputs.zsh-syntax-highlighting}/zsh-syntax-highlighting.plugin.zsh;
-      source ${inputs.zsh-completions}/zsh-completions.plugin.zsh;
-      source ${inputs.zsh-autosuggestions}/zsh-autosuggestions.plugin.zsh;
-      source ${inputs.fzf-tab}/fzf-tab.plugin.zsh;
+      source ${inputs.zsh-plugins.syntax-highlighting}/zsh-syntax-highlighting.plugin.zsh;
+      source ${inputs.zsh-plugins.completions}/zsh-completions.plugin.zsh;
+      source ${inputs.zsh-plugins.autosuggestions}/zsh-autosuggestions.plugin.zsh;
+      source ${inputs.zsh-plugins.fzf-tab}/fzf-tab.plugin.zsh;
 
       autoload -Uz compinit && compinit
 
