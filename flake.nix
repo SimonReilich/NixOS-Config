@@ -68,6 +68,11 @@
       url = "github:aloxaf/fzf-tab";
       flake = false;
     };
+
+    obsidian-plugins = {
+      url = "github:SimonReilich/Obsidian-Plugin-Flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

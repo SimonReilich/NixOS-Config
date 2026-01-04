@@ -588,6 +588,26 @@
         "type": "github"
       }
     },
+    "obsidian-plugins": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1767526423,
+        "narHash": "sha256-DmNrVzu0t4p9wSBdDU9HU0e/ZdLwihCAU64KbuUmb3k=",
+        "owner": "SimonReilich",
+        "repo": "Obsidian-Plugin-Flake",
+        "rev": "674c62226a9bef43fa3e27eed5613cb2bb16bc8e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SimonReilich",
+        "repo": "Obsidian-Plugin-Flake",
+        "type": "github"
+      }
+    },
     "on-linux": {
       "flake": false,
       "locked": {
@@ -669,6 +689,7 @@
         "lanzaboote": "lanzaboote",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_3",
+        "obsidian-plugins": "obsidian-plugins",
         "popprotosim-neo": "popprotosim-neo",
         "stylix": "stylix",
         "zen-browser": "zen-browser",

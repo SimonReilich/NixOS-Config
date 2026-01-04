@@ -15,7 +15,7 @@
       settings = {
         communityPlugins = [
           {
-            pkg = pkgs.callPackage ./homepage { };
+            pkg = inputs.obsidian-plugins.packages.x86_64-linux.homepage;
             enable = true;
             settings = {
               "version" = 4;
@@ -43,7 +43,7 @@
           }
 
           {
-            pkg = pkgs.callPackage ./obsidian-git { };
+            pkg = inputs.obsidian-plugins.packages.x86_64-linux.git;
             enable = true;
             settings = {
               "commitMessage" = "vault backup: {{date}}";
@@ -110,12 +110,12 @@
           }
 
           {
-            pkg = pkgs.callPackage ./obsidian-note-linker { };
+            pkg = inputs.obsidian-plugins.packages.x86_64-linux.note-linker;
             enable = true;
           }
 
           {
-            pkg = pkgs.callPackage ./obsidian-book-search-plugin { };
+            pkg = inputs.obsidian-plugins.packages.x86_64-linux.book-search;
             enable = true;
             settings = {
               "folder" = "Literatur";
@@ -140,7 +140,7 @@
           }
 
           {
-            pkg = pkgs.callPackage ./tag-wrangler { };
+            pkg = inputs.obsidian-plugins.packages.x86_64-linux.tag-wrangler;
             enable = true;
           }
         ];

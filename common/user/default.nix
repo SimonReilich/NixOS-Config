@@ -1,7 +1,7 @@
 {
   imports = [
     ./neovim.nix
-    ./obsidian
+    ./obsidian.nix
     ./packages.nix
     ./prompt.nix
     ./vscode.nix
