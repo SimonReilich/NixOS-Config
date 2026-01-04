@@ -33,7 +33,6 @@
     pull-updates = {
       description = "Pulls changes to system config";
       restartIfChanged = false;
-      onSuccess = [ "rebuild.service" ];
       path = [
         pkgs.git
         pkgs.openssh
@@ -41,15 +40,17 @@
       ];
       script = ''
         git fetch
-        test "$(git branch --show-current)" = "main"
-        if git diff HEAD..origin/main --name-only | grep flake.lock; then
-          ${pkgs.systemd}/bin/systemctl --machine=simonr@.host --user start notify-lock-change.service
-          exit 1
-        elif git status -sb | grep behind; then
-          git pull --ff-only
-          exit 0
+        if test "$(git branch --show-current)" = "main"; then
+          if git diff HEAD..origin/main --name-only | grep flake.lock; then
+            ${pkgs.systemd}/bin/systemctl --machine=simonr@.host --user start notify-lock-change.service
+            exit
+          elif git status -sb | grep behind; then
+            git pull --ff-only
+            ${pkgs.systemd}/bin/systemctl --machine=simonr@.host start rebuild.service
+            exit
+          fi
         fi
-        exit 1
+        exit
       '';
       serviceConfig = {
         PassEnvironment = "DISPLAY";
