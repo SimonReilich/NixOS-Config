@@ -58,9 +58,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nvchad = {
-      url = "github:NVChad/starter";
-      flake = false;
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
