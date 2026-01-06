@@ -138,6 +138,20 @@
         action = "<cmd>Haskell repl toggle<CR>";
         options.desc = "Toggle Haskell REPL";
       }
+
+      # Rust Tooling
+      {
+        mode = "n";
+        key = "<leader>rd";
+        action = "<cmd>RustLsp debuggables<CR>";
+        options.desc = "Rust Debuggables";
+      }
+      {
+        mode = "n";
+        key = "<leader>rr";
+        action = "<cmd>RustLsp runnables<CR>";
+        options.desc = "Rust Runnables";
+      }
     ];
 
     # 4. Plugins
@@ -243,13 +257,6 @@
 
           # Lua
           lua_ls.enable = true;
-
-          # Rust
-          rust_analyzer = {
-            enable = true;
-            installCargo = true;
-            installRustc = true;
-          };
         };
       };
 
@@ -276,6 +283,20 @@
 
       # Specialized Haskell Tooling
       haskell-tools = {
+        enable = true;
+      };
+
+      # Advanced Rust Support
+      rustaceanvim = {
+        enable = true;
+        # Optional: Configure rustaceanvim specific settings
+        # settings.server.default_settings.rust-analyzer = {
+        #   checkOnSave = { command = "clippy"; };
+        # };
+      };
+
+      # Cargo.toml Dependency Management
+      crates-nvim = {
         enable = true;
       };
     };
