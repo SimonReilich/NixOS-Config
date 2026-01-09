@@ -45,6 +45,7 @@
     gnome-solanum
     hieroglyphic
     ffmpeg
+    notion-app-enhanced
 
     # Customization
     adw-gtk3
