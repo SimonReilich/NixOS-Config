@@ -32,6 +32,7 @@
     typstyle
     godot
     inputs.popprotosim-neo.packages.x86_64-linux.default
+    octave
 
     # Gaming
     cartridges
