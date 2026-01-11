@@ -21,7 +21,7 @@
 
     # Creative
     musescore
-    blender-hip
+    blender
     blockbench
     inputs.affinity-nix.packages.x86_64-linux.v3
 
