@@ -23,6 +23,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -72,6 +74,7 @@
       home-manager,
       lanzaboote,
       stylix,
+      nix-flatpak,
       ...
     }@inputs:
     {
@@ -90,6 +93,7 @@
               home-manager.extraSpecialArgs = { inherit inputs; };
             }
             stylix.nixosModules.stylix
+            nix-flatpak.nixosModules.nix-flatpak
           ];
         };
 
@@ -109,6 +113,7 @@
             }
             lanzaboote.nixosModules.lanzaboote
             stylix.nixosModules.stylix
+            nix-flatpak.nixosModules.nix-flatpak
 
             # Fixing broken hidrd-package
             {

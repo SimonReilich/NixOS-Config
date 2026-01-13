@@ -2,6 +2,7 @@
   imports = [
     ./boot.nix
     ./exclude.nix
+    ./flatpak.nix
     ./git.nix
     ./gnome.nix
     ./local.nix
