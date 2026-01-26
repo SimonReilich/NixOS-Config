@@ -47,6 +47,7 @@
     hieroglyphic
     ffmpeg
     notion-app-enhanced
+    gemini-cli
 
     # Customization
     adw-gtk3
