@@ -8,6 +8,7 @@
         bbenoist.nix
         brettm12345.nixfmt-vscode
         github.vscode-github-actions
+        Google.gemini-cli-vscode-ide-companion
         haskell.haskell
         james-yu.latex-workshop
         jnoortheen.nix-ide
