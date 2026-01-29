@@ -9,7 +9,6 @@
     video-trimmer
 
     # Info & Entertainment
-    inputs.helium.defaultPackage.x86_64-linux
     spotify
     wike
     zotero
@@ -23,7 +22,6 @@
     musescore
     blender
     blockbench
-    inputs.affinity-nix.packages.x86_64-linux.v3
 
     # Development
     nixfmt

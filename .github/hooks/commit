@@ -1,6 +1,5 @@
 #!/nix/store/cfqbabpc7xwg8akbcchqbq3cai6qq2vs-bash-5.2p37/bin/bash
 
 treefmt *
-sudo nix-channel --update
 sudo nixos-rebuild switch --flake .
 exec git add *
