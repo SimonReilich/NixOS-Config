@@ -44,7 +44,6 @@
     gnome-solanum
     hieroglyphic
     ffmpeg
-    notion-app-enhanced
     gemini-cli
 
     # Customization
