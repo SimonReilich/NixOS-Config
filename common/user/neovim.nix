@@ -159,7 +159,7 @@
       # File Explorer
       nvim-tree = {
         enable = true;
-        git = {
+        settings.git = {
           enable = true;
         };
         renderer = {
