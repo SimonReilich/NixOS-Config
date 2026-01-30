@@ -14,6 +14,7 @@
     appindicator
     blur-my-shell
     clipboard-history
+    forge
     gsconnect
     quick-settings-audio-panel
     rounded-window-corners-reborn
