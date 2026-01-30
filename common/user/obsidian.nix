@@ -143,6 +143,11 @@
             pkg = inputs.obsidian-plugins.packages.x86_64-linux.tag-wrangler;
             enable = true;
           }
+
+          {
+            pkg = inputs.obsidian-plugins.packages.x86_64-linux.graph-banner;
+            enable = true;
+          }
         ];
 
         app = {
