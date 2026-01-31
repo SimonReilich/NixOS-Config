@@ -430,11 +430,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1769805428,
-        "narHash": "sha256-nSa2N7UwB9vEfZ7eSQwzXDb6Nvsa1KjgGZgbSr+vSno=",
+        "lastModified": 1769855617,
+        "narHash": "sha256-OQ5iPmdACSjTWK36n4pzskHcD+B4KgICKFpC0dqXgIQ=",
         "owner": "SimonReilich",
         "repo": "Obsidian-Plugin-Flake",
-        "rev": "795244db0eed1f9a00fb57d908ec4c033f294d60",
+        "rev": "4e2caf3069f5233d2efebbcb0d425d510d486d5d",
         "type": "github"
       },
       "original": {
