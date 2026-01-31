@@ -286,6 +286,7 @@
             enable = true;
             text = ''
               body:has(.workspace-tab-header.is-active[aria-label="Bibliothek"]) {
+
                   .bases-view {
                     --bases-cards-background: transparent;
                     --bases-cards-cover-background: transparent;
@@ -345,12 +346,12 @@
               }
             '';
           }
-
           {
             name = "Video Player";
             enable = true;
             text = ''
               body:has(.workspace-tab-header.is-active[aria-label="Videothek"]) {
+
                   .bases-view {
                     --bases-cards-background: transparent;
                     --bases-cards-cover-background: transparent;
