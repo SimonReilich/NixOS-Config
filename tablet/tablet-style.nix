@@ -1,4 +1,4 @@
 { pkgs, ... }:
 {
-  stylix.image = ./wallpaper.jpg;
+  stylix.image = ./wallpaper.png;
 }
