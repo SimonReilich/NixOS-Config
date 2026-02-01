@@ -7,11 +7,13 @@
     onlyoffice-desktopeditors
     switcheroo
     video-trimmer
+    rnote
 
     # Info & Entertainment
     spotify
     wike
     zotero
+    nucleus
 
     # Communication
     discord
@@ -22,6 +24,7 @@
     musescore
     blender
     blockbench
+    design
 
     # Development
     nixfmt
@@ -45,6 +48,10 @@
     hieroglyphic
     ffmpeg
     gemini-cli
+    delineate
+    eloquent
+    gnome-network-displays
+    morphosis
 
     # Customization
     adw-gtk3
