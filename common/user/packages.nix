@@ -57,5 +57,9 @@
     adw-gtk3
     gnome-control-center
     gnome-tweaks
+
+    # Passwords
+    proton-pass
+    proton-authenticator
   ];
 }
