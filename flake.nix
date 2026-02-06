@@ -54,6 +54,11 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    thunderbird-gnome-theme = {
+      url = "github:rafaelmardojai/thunderbird-gnome-theme";
+      flake = false;
+    };
   };
 
   outputs =
