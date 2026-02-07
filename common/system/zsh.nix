@@ -91,6 +91,16 @@ EOF
       alias -g C='| wl-copy'
     ";
 
+    interactiveShellInit = ''
+      template() {
+        if [ -z "$1" ]; then
+          echo "Usage: template <name>"
+          return 1
+        fi
+        nix flake init -t "github:SimonReilich/Flake-Templates#$1"
+      }
+    '';
+
     shellAliases = {
       ls = "ls --color";
     };
