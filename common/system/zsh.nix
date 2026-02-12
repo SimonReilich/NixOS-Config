@@ -103,6 +103,8 @@ EOF
 
     shellAliases = {
       ls = "ls --color";
+      update = "(cd /home/simonr/.dotfiles && git add * && sudo nixos-rebuild switch --flake /home/simonr/.dotfiles)";
+      pull-update = "(cd /home/simonr/.dotfiles && git add * && git pull && sudo nixos-rebuild switch --flake /home/simonr/.dotfiles)";
     };
 
     histSize = 10000;
