@@ -59,6 +59,11 @@
       url = "github:rafaelmardojai/thunderbird-gnome-theme";
       flake = false;
     };
+
+    pandora-nix = {
+      url = "github:simonreilich/pandora-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

@@ -443,6 +443,26 @@
         "type": "github"
       }
     },
+    "pandora-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1771253409,
+        "narHash": "sha256-3MbcnnTRsm/rHyK22ktVg4twqfQx8A1xH6TinzV3FtE=",
+        "owner": "simonreilich",
+        "repo": "pandora-flake",
+        "rev": "373912de5b4dbaadb8931008f327c0a8158e4e27",
+        "type": "github"
+      },
+      "original": {
+        "owner": "simonreilich",
+        "repo": "pandora-flake",
+        "type": "github"
+      }
+    },
     "popprotosim-neo": {
       "inputs": {
         "nixpkgs": [
@@ -496,6 +516,7 @@
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "obsidian-plugins": "obsidian-plugins",
+        "pandora-nix": "pandora-nix",
         "popprotosim-neo": "popprotosim-neo",
         "stylix": "stylix",
         "thunderbird-gnome-theme": "thunderbird-gnome-theme",
