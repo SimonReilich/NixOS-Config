@@ -21,6 +21,7 @@
     extraGroups = [
       "wheel"
       "networkmanager"
+      "audio"
     ];
     shell = pkgs.zsh;
   };

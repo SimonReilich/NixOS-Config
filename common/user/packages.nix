@@ -36,7 +36,6 @@
 
     # Gaming
     cartridges
-    prismlauncher
     inputs.pandora-nix.packages.x86_64-linux.default
 
     # Utility

@@ -450,11 +450,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771253409,
-        "narHash": "sha256-3MbcnnTRsm/rHyK22ktVg4twqfQx8A1xH6TinzV3FtE=",
+        "lastModified": 1771338167,
+        "narHash": "sha256-zZHT8EF6XOpLmLZGLWftWlU1qx6Nxn7x5LsuO/p4TaY=",
         "owner": "simonreilich",
         "repo": "pandora-flake",
-        "rev": "373912de5b4dbaadb8931008f327c0a8158e4e27",
+        "rev": "a8ab25a67a097c6d762ff39030e4c003bbf6f45f",
         "type": "github"
       },
       "original": {
