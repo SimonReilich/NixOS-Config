@@ -18,23 +18,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix = {
-      url = "github:nix-community/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    hyprland.url = "github:hyprwm/Hyprland";
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
 
     popprotosim-neo = {
       url = "github:SimonReilich/PopProtoSim-Neo";
@@ -73,7 +59,6 @@
       nixos-hardware,
       home-manager,
       lanzaboote,
-      stylix,
       nix-flatpak,
       ...
     }@inputs:
@@ -92,7 +77,6 @@
               home-manager.users.simonr = import ./desktop/desktop-home.nix;
               home-manager.extraSpecialArgs = { inherit inputs; };
             }
-            stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
           ];
         };
@@ -112,7 +96,6 @@
               home-manager.extraSpecialArgs = { inherit inputs; };
             }
             lanzaboote.nixosModules.lanzaboote
-            stylix.nixosModules.stylix
             nix-flatpak.nixosModules.nix-flatpak
 
             # Fixing broken hidrd-package

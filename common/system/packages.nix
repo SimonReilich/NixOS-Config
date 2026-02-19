@@ -30,6 +30,9 @@
     bat
     wl-clipboard
     libnotify
+
+    # Basics
+    nautilus
   ];
 
   programs.java.enable = true;
