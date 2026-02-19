@@ -25,8 +25,6 @@
     shell = pkgs.zsh;
   };
 
-  services.getty.autologinUser = "simonr";
-
   # Prevent the new user dialog in zsh
   system.userActivationScripts.zshrc = "touch .zshrc";
 
