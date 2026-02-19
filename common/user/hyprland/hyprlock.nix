@@ -10,7 +10,7 @@
 
       background = [
         {
-          monitor = "HDMI-A-1";
+          monitor = "";
           path = "/home/simonr/.dotfiles/desktop/wallpaper.png";
           color = "rgba(25, 20, 20, 1.0)";
           blur_passes = 1;
@@ -21,7 +21,7 @@
 
       input-field = [
         {
-          monitor = "HDMI-A-1";
+          monitor = "";
           size = "280, 60";
           outline_thickness = 2;
           dots_size = 0.3;
@@ -47,7 +47,7 @@
 
       label = [
         {
-          monitor = "HDMI-A-1";
+          monitor = "";
           text = ''cmd[update:1000] echo "<span font='Google Sans Flex @wght=200,wdth=125,ROND=100'>$(date +"%H")</span>"'';
           color = "rgb(c1c6d5)";
           font_size = 180;
@@ -56,7 +56,7 @@
           valign = "center";
         }
         {
-          monitor = "HDMI-A-1";
+          monitor = "";
           text = ''cmd[update:1000] echo "<span font='Google Sans Flex @wght=200,wdth=125,ROND=100'>$(date +"%M")</span>"'';
           color = "rgb(c1c6d5)";
           font_size = 180;
@@ -66,7 +66,7 @@
         }
 
         {
-          monitor = "HDMI-A-1";
+          monitor = "";
           text = ''cmd[update:1000] echo "<span font='Google Sans Flex @wght=600,wdth=100,ROND=100'>$(date +"%a., %d. %b.") $(curl -s 'wttr.in?format=%c%t')</span>"'';
           color = "rgb(c1c6d5)";
           font_size = 16;
