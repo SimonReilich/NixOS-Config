@@ -22,13 +22,13 @@ let
     BASE=$(git merge-base @ "$UPSTREAM")
 
     if [ $LOCAL = $REMOTE ]; then
-        printf '{"text": ""}\n'
+        printf '{"text": "", "tooltip": "Up to date", "class": ""}\n'
     elif [ $LOCAL = $BASE ]; then
-        printf '{"text": "󰚰", "tooltip": "There are updates available"}\n'
+        printf '{"text": "󰚰", "tooltip": "There are updates available", "class": ""}\n'
     elif [ $REMOTE = $BASE ]; then
-        printf '{"text": "󰕒", "tooltip": "Your config is ahead of the repo"}\n'
+        printf '{"text": "󰕒", "tooltip": "Your config is ahead of the repo", "class": ""}\n'
     else
-        printf '{"text": "", "tooltip": "You have not pushed to the Repo", "class": "needs-attention"}\n'
+        printf '{"text": "", "tooltip": "You have diverged", "class": "needs-attention"}\n'
     fi
   '';
 
@@ -42,7 +42,7 @@ let
     BASE=$(git merge-base @ "$UPSTREAM")
 
     if [ $LOCAL = $REMOTE ]; then
-        :
+        return
     elif [ $LOCAL = $BASE ]; then
         pull-update
     elif [ $REMOTE = $BASE ]; then
@@ -314,7 +314,7 @@ in
       #tray {
         background: rgb(193, 198, 213);
         border-radius: 24px;
-        padding: 0px 12px;
+        padding: 0px 10px;
         margin: 4px;
         margin-right: 32px;
       }
