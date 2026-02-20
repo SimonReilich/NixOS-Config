@@ -108,7 +108,7 @@
           icon-size = 36;
           markup = true;
           rewrite = {
-            "git-credential-manager" = "<span font='Google Sans Flex @wdth=50' size='xx-small'> </span>󰊢";
+            "git-credential-manager" = "<span font='Google Sans Flex @wdth=80' size='xx-small'> </span>󰊢";
             "com.mitchellh.ghostty" = "<span font='Google Sans Flex @wdth=600' size='small'> </span>";
             "org.gnome.nautilus" = "<span font='Google Sans Flex @wdth=130' size='xx-small'> </span>";
             "steam" = "<span font='Google Sans Flex @wdth=150' size='xx-small'> </span>";
