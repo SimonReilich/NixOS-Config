@@ -13,7 +13,7 @@
         position = "top";
         height = 32;
         modules-left = [ "clock" ];
-        modules-center = [ "hyprland/window" ];
+        modules-center = [ "hyprland/workspaces" ];
         modules-right = [
           "network"
           "pulseaudio"
@@ -23,8 +23,18 @@
           format = "{:%H:%M %a., %d. %b.}";
         };
 
-        "hyprland/window" = {
-          format = "{title}";
+        "hyprland/workspaces" = {
+          disable_scroll = true;
+          all_outputs = true;
+          format = "{icon}";
+          format-icons = {
+            default = "●";
+            active = "●";
+            urgent = "🞿";
+          };
+          on_click = "activate";
+          tooltip = true;
+          tooltip-format = "{windows}";
         };
 
         "network" = {
@@ -47,23 +57,7 @@
         height = 64;
         modules-left = [ ];
         modules-center = [ "wlr/taskbar" ];
-        modules-right = [
-          "hyprland/workspaces"
-          "hyprland/window"
-        ];
-
-        "hyprland/workspaces" = {
-          disable_scroll = true;
-          all_outputs = true;
-          format = "{icon}";
-          format-icons = {
-            default = "●";
-            active = "●";
-            urgent = "🞿";
-          };
-          tooltip = true;
-          tooltip-format = "{windows}";
-        };
+        modules-right = [ "hyprland/window" ];
 
         "wlr/taskbar" = {
           format = "{icon}";
@@ -115,19 +109,24 @@
       }
 
       #workspaces button {
-        min-height: 64px;
+        min-height: 32px;
 
         padding: 0 5px;
         background: transparent;
         color: rgba(193, 198, 213, 0.5);
         border: none;
         box-shadow: none;
+        font-size: 12px;
         transition: all 0.3s ease;
       }
 
       #workspaces button.active {
         color: rgb(193, 198, 213);
-        font-size: 24px;
+        font-size: 16px;
+      }
+
+      #workspaces button:only-child {
+        color: rgba(193, 198, 213, 0);
       }
 
       #workspaces button:hover {
