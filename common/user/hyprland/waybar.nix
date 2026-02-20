@@ -13,19 +13,30 @@ let
   '';
 
   check-updates = pkgs.writeShellScript "check-updates.sh" ''
-    cd ~/.dotfiles
-    git fetch origin
+    cd ~/.dotfiles || exit 1
+    git fetch origin || exit 1
 
-    UPSTREAM=$\{1:-'@{u}'}
-    LOCAL=$(git rev-parse @)
-    REMOTE=$(git rev-parse "$UPSTREAM")
-    BASE=$(git merge-base @ "$UPSTREAM")
+    CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    if [ -z "$CURRENT_BRANCH" ]; then
+        printf '{"text": "", "tooltip": "Error: Could not determine current branch", "class": "needs-attention"}\n'
+        exit 1
+    fi
 
-    if [ $LOCAL = $REMOTE ]; then
+    UPSTREAM_REF=$(git rev-parse --abbrev-ref --symbolic-full-name "$\{CURRENT_BRANCH}@{upstream}" 2>/dev/null)
+    if [ -z "$UPSTREAM_REF" ]; then
+        printf '{"text": "", "tooltip": "Error: No upstream branch configured for %s", "class": "needs-attention"}\n' "$CURRENT_BRANCH"
+        exit 1
+    fi
+
+    LOCAL=$(git rev-parse "$CURRENT_BRANCH")
+    REMOTE=$(git rev-parse "$UPSTREAM_REF")
+    BASE=$(git merge-base "$CURRENT_BRANCH" "$UPSTREAM_REF")
+
+    if [ "$LOCAL" = "$REMOTE" ]; then
         printf '{"text": "", "tooltip": "Up to date", "class": ""}\n'
-    elif [ $LOCAL = $BASE ]; then
+    elif [ "$LOCAL" = "$BASE" ]; then
         printf '{"text": "󰚰", "tooltip": "There are updates available", "class": ""}\n'
-    elif [ $REMOTE = $BASE ]; then
+    elif [ "$REMOTE" = "$BASE" ]; then
         printf '{"text": "󰕒", "tooltip": "Your config is ahead of the repo", "class": ""}\n'
     else
         printf '{"text": "", "tooltip": "You have diverged", "class": "needs-attention"}\n'
@@ -33,19 +44,30 @@ let
   '';
 
   update-button = pkgs.writeShellScript "update-button.sh" ''
-    cd ~/.dotfiles
-    git fetch origin
+    cd ~/.dotfiles || exit 1
+    git fetch origin || exit 1
 
-    UPSTREAM=$\{1:-'@{u}'}
-    LOCAL=$(git rev-parse @)
-    REMOTE=$(git rev-parse "$UPSTREAM")
-    BASE=$(git merge-base @ "$UPSTREAM")
+    CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    if [ -z "$CURRENT_BRANCH" ]; then
+        echo "Error: Could not determine current branch" >&2
+        exit 1
+    fi
 
-    if [ $LOCAL = $REMOTE ]; then
-        return
-    elif [ $LOCAL = $BASE ]; then
+    UPSTREAM_REF=$(git rev-parse --abbrev-ref --symbolic-full-name "$\{CURRENT_BRANCH}@{upstream}" 2>/dev/null)
+    if [ -z "$UPSTREAM_REF" ]; then
+        echo "Error: No upstream branch configured for $CURRENT_BRANCH" >&2
+        exit 1
+    fi
+
+    LOCAL=$(git rev-parse "$CURRENT_BRANCH")
+    REMOTE=$(git rev-parse "$UPSTREAM_REF")
+    BASE=$(git merge-base "$CURRENT_BRANCH" "$UPSTREAM_REF")
+
+    if [ "$LOCAL" = "$REMOTE" ]; then
+        return 0
+    elif [ "$LOCAL" = "$BASE" ]; then
         pull-update
-    elif [ $REMOTE = $BASE ]; then
+    elif [ "$REMOTE" = "$BASE" ]; then
         code .
     else
         code .
