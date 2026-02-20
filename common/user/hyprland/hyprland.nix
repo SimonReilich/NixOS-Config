@@ -9,6 +9,7 @@
     wireplumber
     pulsemixer
     hyprpolkitagent
+    jq
   ];
 
   wayland.windowManager.hyprland = {

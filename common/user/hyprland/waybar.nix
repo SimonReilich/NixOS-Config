@@ -97,8 +97,43 @@
         position = "bottom";
         height = 64;
         modules-left = [ ];
-        modules-center = [ "wlr/taskbar" ];
+        modules-center = [
+          "custom/chromium"
+          "custom/spotify"
+          "custom/obsidian"
+          "custom/discord"
+          "custom/seperator"
+          "wlr/taskbar"
+        ];
         modules-right = [ "hyprland/window" ];
+
+        "custom/chromium" = {
+          format = "<span font='Google Sans Flex @wdth=150' size='small'> </span>";
+          tooltip-format = "Chromium";
+          on-click = "hyprctl clients -j | jq -r '.[] | select(.initialClass == \"chromium-browser\") | .workspace.id' | head -n 1 | { read -r wid; if [ -n \"$wid\" ]; then hyprctl dispatch workspace \"$wid\" && hyprctl dispatch focuswindow initialClass:\"chromium-browser\"; else chromium; fi; }";
+        };
+
+        "custom/spotify" = {
+          format = "󰓇";
+          tooltip-format = "Spotify";
+          on-click = "hyprctl clients -j | jq -r '.[] | select(.initialClass == \"spotify\") | .workspace.id' | head -n 1 | { read -r wid; if [ -n \"$wid\" ]; then hyprctl dispatch workspace \"$wid\" && hyprctl dispatch focuswindow initialClass:\"spotify\"; else spotify; fi; }";
+        };
+
+        "custom/obsidian" = {
+          format = "󱓧<span font='Google Sans Flex @wdth=10' size='xx-small'> </span>";
+          tooltip-format = "Obsidian";
+          on-click = "hyprctl clients -j | jq -r '.[] | select(.initialClass == \"obsidian\") | .workspace.id' | head -n 1 | { read -r wid; if [ -n \"$wid\" ]; then hyprctl dispatch workspace \"$wid\" && hyprctl dispatch focuswindow initialClass:\"obsidian\"; else obsidian; fi; }";
+        };
+
+        "custom/discord" = {
+          format = "<span font='Google Sans Flex @wdth=400' size='medium'> </span>";
+          tooltip-format = "Discord";
+          on-click = "hyprctl clients -j | jq -r '.[] | select(.initialClass == \"discord\") | .workspace.id' | head -n 1 | { read -r wid; if [ -n \"$wid\" ]; then hyprctl dispatch workspace \"$wid\" && hyprctl dispatch focuswindow initialClass:\"discord\"; else discord; fi; }";
+        };
+
+        "custom/seperator" = {
+          format = " ";
+        };
 
         "wlr/taskbar" = {
           format = "{app_id}";
@@ -108,7 +143,7 @@
           icon-size = 36;
           markup = true;
           rewrite = {
-            "git-credential-manager" = "<span font='Google Sans Flex @wdth=80' size='xx-small'> </span>󰊢";
+            "git-credential-manager" = "<span font='Google Sans Flex @wdth=120' size='xx-small'> </span>󰊢";
             "com.mitchellh.ghostty" = "<span font='Google Sans Flex @wdth=600' size='small'> </span>";
             "org.gnome.nautilus" = "<span font='Google Sans Flex @wdth=130' size='xx-small'> </span>";
             "steam" = "<span font='Google Sans Flex @wdth=150' size='xx-small'> </span>";
@@ -228,6 +263,19 @@
         font-size: 20px;
       }
 
+      #custom-seperator {
+        background: rgba(193, 198, 214, 0.5);
+        padding: 0.5px;
+        margin: 16px;
+        margin-left: 12px;
+        margin-right: 12px;
+        border-radius: 16px;
+      }
+
+      #custom-chromium,
+      #custom-spotify,
+      #custom-obsidian,
+      #custom-discord,
       #taskbar button {
         color: rgb(193, 198, 214);
         background: rgb(46, 48, 54);
