@@ -216,7 +216,7 @@ in
         "custom/taskbar-separator" = {
           exec = "${show-seperator}";
           return-type = "json";
-          interval = 1;
+          interval = 0.25;
         };
 
         "wlr/taskbar" = {
