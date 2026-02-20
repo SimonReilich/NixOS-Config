@@ -58,8 +58,13 @@ in
       userName = "ge92ham";
 
       imap = {
-        host = "mail.tum.de";
+        host = "xmail.mwn.de";
         port = 993;
+        tls.enable = true;
+      };
+      smtp = {
+        host = "postout.lrz.de";
+        port = 465;
         tls.enable = true;
       };
       signature.text = ''
