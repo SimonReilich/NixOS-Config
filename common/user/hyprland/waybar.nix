@@ -3,6 +3,15 @@
   ...
 }:
 
+let
+  show-seperator = pkgs.writeShellScript "show-seperator.sh" ''
+    if hyprctl clients -j | jq -e 'length > 0' > /dev/null; then
+        printf '{"text": "%s"}\n' " "
+    else
+        printf '{"text": "%s"}\n' ""
+    fi
+  '';
+in
 {
   programs.waybar = {
     enable = true;
@@ -102,7 +111,7 @@
           "custom/spotify"
           "custom/obsidian"
           "custom/discord"
-          "custom/seperator"
+          "custom/taskbar-separator"
           "wlr/taskbar"
         ];
         modules-right = [ "hyprland/window" ];
@@ -131,8 +140,10 @@
           on-click = "hyprctl clients -j | jq -r '.[] | select(.initialClass == \"discord\") | .workspace.id' | head -n 1 | { read -r wid; if [ -n \"$wid\" ]; then hyprctl dispatch workspace \"$wid\" && hyprctl dispatch focuswindow initialClass:\"discord\"; else discord; fi; }";
         };
 
-        "custom/seperator" = {
-          format = " ";
+        "custom/taskbar-separator" = {
+          exec = "${show-seperator}";
+          return-type = "json";
+          interval = 1;
         };
 
         "wlr/taskbar" = {
@@ -263,7 +274,7 @@
         font-size: 20px;
       }
 
-      #custom-seperator {
+      #custom-taskbar-separator {
         background: rgba(193, 198, 214, 0.5);
         padding: 0.5px;
         margin: 16px;
