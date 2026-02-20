@@ -22,6 +22,7 @@
 
     # Creative
     musescore
+    muse-sounds-manager
     blender
     blockbench
     design
@@ -49,7 +50,6 @@
     gemini-cli
     delineate
     eloquent
-    gnome-network-displays
     morphosis
 
     # Customization

@@ -108,11 +108,44 @@
           icon-size = 36;
           markup = true;
           rewrite = {
-            "chromium-browser" =
-              "<span font='Google Sans Flex @wdth=200' size='xx-small'> </span><span font='Google Sans Flex @wdth=10' size='xx-small'> </span>";
-            "code" =
-              "<span font='Google Sans Flex @wdth=200' size='xx-small'> </span><span font='Google Sans Flex @wdth=10' size='xx-small'> </span>";
+            "git-credential-manager" = "<span font='Google Sans Flex @wdth=50' size='xx-small'> </span>󰊢";
             "com.mitchellh.ghostty" = "<span font='Google Sans Flex @wdth=600' size='small'> </span>";
+            "org.gnome.nautilus" = "<span font='Google Sans Flex @wdth=130' size='xx-small'> </span>";
+            "steam" = "<span font='Google Sans Flex @wdth=150' size='xx-small'> </span>";
+            "chromium-browser" = "<span font='Google Sans Flex @wdth=140' size='xx-small'> </span>";
+            "thunderbird" = "<span font='Google Sans Flex @wdth=100' size='xx-small'> </span>";
+            "obsidian" = "<span font='Google Sans Flex @wdth=90' size='xx-small'> </span>󱓧";
+            "org.gnome.gitlab.somas.Apostrophe" =
+              "<span font='Google Sans Flex @wdth=120' size='xx-small'> </span>󰼭";
+            "ONLYOFFICE" = "<span font='Google Sans Flex @wdth=100' size='xx-small'> </span>󰏆";
+            "io.gitlab.adhami3310.Converter" =
+              "<span font='Google Sans Flex @wdth=100' size='xx-small'> </span>󱨀";
+            "org.gnome.gitlab.YaLTeR.VideoTrimmer" =
+              "<span font='Google Sans Flex @wdth=130' size='xx-small'> </span>";
+            "com.github.flxzt.rnote" = "<span font='Google Sans Flex @wdth=150' size='xx-small'> </span>";
+            "spotify" = "<span font='Google Sans Flex @wdth=120' size='xx-small'> </span>󰓇";
+            "com.github.hugolabe.Wike" = "<span font='Google Sans Flex @wdth=45' size='xx-small'> </span>";
+            "Zotero" = "<span font='Google Sans Flex @wdth=50' size='xx-small'> </span>󱛊";
+            "page.codeberg.lo_vely.Nucleus" =
+              "<span font='Google Sans Flex @wdth=110' size='xx-small'> </span>󰝨";
+            "discord" = "<span font='Google Sans Flex @wdth=80' size='x-small'> </span>";
+            "signal" = "<span font='Google Sans Flex @wdth=120' size='x-small'> </span>";
+            "Zulip" = "<span font='Google Sans Flex @wdth=120' size='xx-small'> </span>";
+            "Blender" = "<span font='Google Sans Flex @wdth=150' size='xx-small'> </span>";
+            "Blockbench" = "<span font='Google Sans Flex @wdth=90' size='x-small'> </span>";
+            "Godot" = "<span font='Google Sans Flex @wdth=200' size='small'> </span>";
+            "page.kramo.Cartridges" = "<span font='Google Sans Flex @wdth=120' size='xx-small'> </span>󰺵";
+            "PandoraLauncher" = "<span font='Google Sans Flex @wdth=110' size='xx-small'> </span>󰍳";
+            "io.github.fizzyizzy05.binary" = "<span font='Google Sans Flex @wdth=90' size='x-small'> </span>";
+            "com.github.finefindus.eyedropper" =
+              "<span font='Google Sans Flex @wdth=130' size='xx-small'> </span>";
+            "io.github.finefindus.Hieroglyphic" =
+              "<span font='Google Sans Flex @wdth=150' size='xx-small'> </span>";
+            "io.github.seadve.Delineate" = "<span font='Google Sans Flex @wdth=110' size='xx-small'> </span>󱁉";
+            "garden.jamie.Morphosis" = "<span font='Google Sans Flex @wdth=150' size='xx-small'> </span>";
+            "Proton Pass" = "<span font='Google Sans Flex @wdth=140' size='xx-small'> </span>";
+            "proton-authenticator" = "<span font='Google Sans Flex @wdth=110' size='xx-small'> </span>󰦯";
+            "code" = "<span font='Google Sans Flex @wdth=200' size='xx-small'> </span>";
           };
         };
 
@@ -172,6 +205,7 @@
         border-radius: 24px;
         padding: 2px 10px;
         margin: 4px;
+        margin-right: 32px;
       }
 
       #tray > .needs-attention {
@@ -199,6 +233,8 @@
         background: rgb(46, 48, 54);
         transition: all 0.3s ease;
         margin: 8px;
+        margin-left: 16px;
+        margin-right: 16px;
         font-size: 36px;
         border-radius: 16px;
         min-width: 48px;
@@ -207,19 +243,13 @@
 
       #taskbar button.active,
       #taskbar button:hover {
-        border-style: solid;
-        border-width: 3px;
-        border-radius: 19px;
-        margin: 5px;
-        border-color: rgb(193, 198, 214);
+        background: rgb(193, 198, 214);
+        color: rgb(46, 48, 54);
       }
 
       #taskbar button.urgent {
-        border-style: solid;
-        border-width: 2px;
-        border-radius: 19px;
-        margin: 5px;
-        border-color: rgb(96, 20, 16);
+        background: rgb(96, 20, 16);
+        color: rgb(238, 103, 92);
       }
 
       #workspaces button {
