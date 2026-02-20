@@ -201,7 +201,7 @@
         margin: 8px;
         font-size: 36px;
         border-radius: 16px;
-        min-width: 30px;
+        min-width: 48px;
         padding: 0px 0px 0px 0px;
       }
 
