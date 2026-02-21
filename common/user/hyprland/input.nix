@@ -37,7 +37,7 @@
 
         "SUPER_SHIFT, W, exec, pkill waybar || waybar"
 
-        ", XF86PowerOff, exec, systemctl suspend-then-hibernate"
+        "SUPER, Escape, exec, systemctl suspend-then-hibernate"
       ];
 
       binds = {
