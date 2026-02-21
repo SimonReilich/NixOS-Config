@@ -31,6 +31,10 @@ let
     fi
   '';
 
+  update = pkgs.writeShellScript "update.sh" ''
+    (cd ~/.dotfiles && git add * && git pull && sudo nixos-rebuild switch --flake ~/.dotfiles && sudo nix-collect-garbage --delete-older-than 7d)
+  '';
+
   update-button = pkgs.writeShellScript "update-button.sh" ''
     cd ~/.dotfiles
     git fetch origin
@@ -42,7 +46,7 @@ let
     if [ "$LOCAL" = "$REMOTE" ]; then
         exit 0
     elif [ "$LOCAL" = "$BASE" ]; then
-        pull-update
+        ghostty --wait-after-command=true -e zsh -c "bash ${update}"
     elif [ "$REMOTE" = "$BASE" ]; then
         code .
     else
