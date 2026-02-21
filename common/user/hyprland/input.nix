@@ -36,6 +36,8 @@
         "SUPER_SHIFT, Left, movetoworkspace, r-1"
 
         "SUPER_SHIFT, W, exec, pkill waybar || waybar"
+
+        ", XF86PowerOff, exec, systemctl suspend-then-hibernate"
       ];
 
       binds = {
