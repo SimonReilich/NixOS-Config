@@ -7,10 +7,10 @@
 {
   home.packages = with pkgs; [
     wireplumber
-    pulsemixer
     hyprpicker
     hyprpolkitagent
     jq
+    libnotify
   ];
 
   wayland.windowManager.hyprland = {
