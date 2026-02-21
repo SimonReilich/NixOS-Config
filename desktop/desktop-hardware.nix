@@ -40,6 +40,11 @@
     ];
   };
 
+  fileSystems."/mnt/games" = {
+    device = "/dev/disk/by-uuid/a20d6611-537b-44c3-aa30-5e6d9ba2ae99";
+    fsType = "ext4";
+  };
+
   swapDevices = [
     { device = "/dev/disk/by-uuid/bc72966e-9faf-4446-a7de-802520f39445"; }
   ];
