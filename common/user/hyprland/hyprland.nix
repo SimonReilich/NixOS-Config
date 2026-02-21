@@ -8,6 +8,7 @@
   home.packages = with pkgs; [
     wireplumber
     pulsemixer
+    hyprpicker
     hyprpolkitagent
     jq
   ];

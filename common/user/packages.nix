@@ -41,7 +41,6 @@
 
     # Utility
     binary
-    eyedropper
     gnome-decoder
     gnome-graphs
     gnome-solanum
