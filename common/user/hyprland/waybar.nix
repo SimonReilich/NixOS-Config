@@ -300,13 +300,13 @@ in
         color: rgb(193, 198, 213);
         margin: 4px;
         margin-left: 32px;
+        padding: 0px 14.5px 0px 9.5px;
       }
 
       #custom-updates.needs-attention {
         background: rgb(238, 103, 92);
         color: rgb(96, 20, 16);
         border-radius: 24px;
-        padding: 0px 14.5px 0px 9.5px;
       }
 
       #tray {
