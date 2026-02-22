@@ -188,7 +188,7 @@ in
         };
 
         "custom/discord" = {
-          format = "<span font='Google Sans Flex @wdth=400' size='medium'> </span>";
+          format = "<span size='small'></span><span font='Google Sans Flex @wdth=400' size='medium'> </span>";
           tooltip-format = "Discord";
           on-click = "hyprctl clients -j | jq -r '.[] | select(.initialClass == \"discord\") | .workspace.id' | head -n 1 | { read -r wid; if [ -n \"$wid\" ]; then hyprctl dispatch workspace \"$wid\" && hyprctl dispatch focuswindow initialClass:\"discord\"; else discord; fi; }";
         };
@@ -227,7 +227,8 @@ in
             "Zotero" = "<span font='Google Sans Flex @wdth=50' size='xx-small'> </span>󱛊";
             "page.codeberg.lo_vely.Nucleus" =
               "<span font='Google Sans Flex @wdth=110' size='xx-small'> </span>󰝨";
-            "discord" = "<span font='Google Sans Flex @wdth=80' size='x-small'> </span>";
+            "discord" =
+              "<span font='Google Sans Flex @wdth=140' size='x-small'> </span><span size='small'></span>";
             "signal" = "<span font='Google Sans Flex @wdth=120' size='x-small'> </span>";
             "Zulip" = "<span font='Google Sans Flex @wdth=120' size='xx-small'> </span>";
             "Blender" = "<span font='Google Sans Flex @wdth=150' size='xx-small'> </span>";
@@ -368,6 +369,10 @@ in
         padding: 0px 0px 0px 0px;
       }
 
+      #custom-chromium:hover,
+      #custom-spotify:hover,
+      #custom-obsidian:hover,
+      #custom-discord:hover,
       #taskbar button.active,
       #taskbar button:hover {
         background: rgb(193, 198, 214);
