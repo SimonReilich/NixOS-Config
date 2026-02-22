@@ -52,11 +52,11 @@
     "completions": {
       "flake": false,
       "locked": {
-        "lastModified": 1770186567,
-        "narHash": "sha256-xIEK/PdyQ9x1A9qiKgZFiqkAUwQsZNcBWQFYh/OTLWw=",
+        "lastModified": 1771409300,
+        "narHash": "sha256-gSvuBYxe+L6ZdAViz4xyTkCGBKH1872bFdvBEAQYZKQ=",
         "owner": "zsh-users",
         "repo": "zsh-completions",
-        "rev": "989d0445450b8e79b3cde2da3b7f4bb54934354c",
+        "rev": "4c84ebad534bdac3d2061db69082960c50856538",
         "type": "github"
       },
       "original": {
@@ -200,11 +200,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771102945,
-        "narHash": "sha256-e5NfW8NhC3qChR8bHVni/asrig/ZFzd1wzpq+cEE/tg=",
+        "lastModified": 1771683283,
+        "narHash": "sha256-WxAEkAbo8dP7qiyPM6VN4ZGAxfuBVlNBNPkrqkrXVEc=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "ff5e5d882c51f9a032479595cbab40fd04f56399",
+        "rev": "c6ed3eab64d23520bcbb858aa53fe2b533725d4a",
         "type": "github"
       },
       "original": {
@@ -313,11 +313,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1771626719,
-        "narHash": "sha256-QJy42uuACa8LJqX426L8PfGuIoEtnwo18C2VIl6cNO4=",
+        "lastModified": 1771709711,
+        "narHash": "sha256-cYjF7C20GrO7hbFNuOPVsxps9jUsGkkkxoWsd7Gwc/I=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "d91952c555085758117f1eb360d4ace120ee5d65",
+        "rev": "0eb4755a3ed1980c15453fbe73d4ad36dea5da4b",
         "type": "github"
       },
       "original": {
@@ -599,11 +599,11 @@
     },
     "nixos-hardware": {
       "locked": {
-        "lastModified": 1770882871,
-        "narHash": "sha256-nw5g+xl3veea+maxJ2/81tMEA/rPq9aF1H5XF35X+OE=",
+        "lastModified": 1771423359,
+        "narHash": "sha256-yRKJ7gpVmXbX2ZcA8nFi6CMPkJXZGjie2unsiMzj3Ig=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "af04cb78aa85b2a4d1c15fc7270347e0d0eda97b",
+        "rev": "740a22363033e9f1bb6270fbfb5a9574067af15b",
         "type": "github"
       },
       "original": {
@@ -631,11 +631,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1771008912,
-        "narHash": "sha256-gf2AmWVTs8lEq7z/3ZAsgnZDhWIckkb+ZnAo5RzSxJg=",
+        "lastModified": 1771369470,
+        "narHash": "sha256-0NBlEBKkN3lufyvFegY4TYv5mCNHbi5OmBDrzihbBMQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a82ccc39b39b621151d6732718e3e250109076fa",
+        "rev": "0182a361324364ae3f436a63005877674cf45efb",
         "type": "github"
       },
       "original": {
@@ -654,11 +654,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1771023756,
-        "narHash": "sha256-sTj1hrPT7D4oGHaQQzwDeqyZBwnxYc+T7yceyQc4sy4=",
+        "lastModified": 1771135771,
+        "narHash": "sha256-wyvBIhDuyCRyjB3yPg77qoyxrlgQtBR1rVW3c9knV3E=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "4c63aa76be59b49ae89892ae803005afd4a400cd",
+        "rev": "ed0424f0b08d303a7348f52f7850ad1b2704f9ba",
         "type": "github"
       },
       "original": {
@@ -674,11 +674,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771111337,
-        "narHash": "sha256-irgirnPtgbs0G0kpMWpHC3tmZ4YzCEHcKJ+Y+MIPDx4=",
+        "lastModified": 1771716103,
+        "narHash": "sha256-nzFW0+YoV5Y9cFhw85i4FOmyxP0LiChkBnWrtYMBpxE=",
         "owner": "SimonReilich",
         "repo": "Obsidian-Plugin-Flake",
-        "rev": "7a0f690e20f934d56a3dd91f4d7c9cfcbeb753a4",
+        "rev": "c9847b6c28142869d87dfcf5629c21fee741027d",
         "type": "github"
       },
       "original": {
@@ -694,11 +694,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771338167,
-        "narHash": "sha256-zZHT8EF6XOpLmLZGLWftWlU1qx6Nxn7x5LsuO/p4TaY=",
+        "lastModified": 1771716282,
+        "narHash": "sha256-EAu7K9VJzS/lgchaZNaf+i1pKUeBtUTF515CIXnGSAY=",
         "owner": "simonreilich",
         "repo": "pandora-flake",
-        "rev": "a8ab25a67a097c6d762ff39030e4c003bbf6f45f",
+        "rev": "7eb5666bb49590b61b019d2aea009516cc9aa51a",
         "type": "github"
       },
       "original": {
@@ -714,11 +714,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771112074,
-        "narHash": "sha256-tzMq0BN8dechoLm+Y6eQhJYIRWfSO7XzIZqwHnd09hQ=",
+        "lastModified": 1771716854,
+        "narHash": "sha256-5xcH5VIhqwMyndNMWTFFdZxMyR9E7HBa0Jrc76Wj+BU=",
         "owner": "SimonReilich",
         "repo": "PopProtoSim-Neo",
-        "rev": "3b4bd6fb85d2a9ec26ab59df66c668b2d942cc72",
+        "rev": "56c6b97a4f0a80a0a60d729fabf23493fb6b64c2",
         "type": "github"
       },
       "original": {
@@ -922,11 +922,11 @@
         "syntax-highlighting": "syntax-highlighting"
       },
       "locked": {
-        "lastModified": 1771111058,
-        "narHash": "sha256-Xn/ZYOlWOXiMpt3tMNqDnqgj5gv/0/TA7NCQ7tZdmhw=",
+        "lastModified": 1771715865,
+        "narHash": "sha256-N3DHZsa044r5fQfaXrMb0QjxCGqnBnbcl9LDEIg0xog=",
         "owner": "SimonReilich",
         "repo": "Zsh-Plugin-Flake",
-        "rev": "ef8403f285a68c82507227ef1dc7987882f66cd4",
+        "rev": "b465ce4ebeabfb2e5229f05abb92a17d5c8201a7",
         "type": "github"
       },
       "original": {
