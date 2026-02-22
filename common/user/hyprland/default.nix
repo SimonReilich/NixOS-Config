@@ -4,8 +4,8 @@
     ./hypridle.nix
     ./hyprland.nix
     ./input.nix
-    ./mako.nix
     ./settings.nix
+    ./swaync.nix
     ./waybar.nix
   ];
 }

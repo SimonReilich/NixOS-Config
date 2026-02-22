@@ -79,6 +79,7 @@ in
         "clock" = {
           format = "<span font='Google Sans Flex @wght=600,wdth=100,ROND=100'>{:%H:%M  %a., %d. %b.}</span>";
           tooltip = false;
+          on-click = "swaync-client -t";
         };
 
         "custom/updates" = {
