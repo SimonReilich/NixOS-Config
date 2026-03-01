@@ -6,49 +6,9 @@
 let
   show-seperator = pkgs.writeShellScript "show-seperator.sh" ''
     if hyprctl clients -j | jq -e 'length > 0' > /dev/null; then
-        printf '{"text": " "}\n'
+        printf '{"text": "%s"}\n' " "
     else
-        printf '{"text": ""}\n'
-    fi
-  '';
-
-  check-updates = pkgs.writeShellScript "check-updates.sh" ''
-    cd ~/.dotfiles
-    git fetch origin
-
-    UPSTREAM=$\{1:-'@{u}'}
-    LOCAL=$(git rev-parse @)
-    REMOTE=$(git rev-parse "$UPSTREAM")
-    BASE=$(git merge-base @ "$UPSTREAM")
-
-    if [ $LOCAL = $REMOTE ]; then
-        printf '{"text": ""}\n'
-    elif [ $LOCAL = $BASE ]; then
-        printf '{"text": "󰚰", "tooltip": "There are updates available"}\n'
-    elif [ $REMOTE = $BASE ]; then
-        printf '{"text": "󰕒", "tooltip": "Your config is ahead of the repo"}\n'
-    else
-        printf '{"text": "", "tooltip": "You have not pushed to the Repo", "class": "needs-attention"}\n'
-    fi
-  '';
-
-  update-button = pkgs.writeShellScript "update-button.sh" ''
-    cd ~/.dotfiles
-    git fetch origin
-
-    UPSTREAM=$\{1:-'@{u}'}
-    LOCAL=$(git rev-parse @)
-    REMOTE=$(git rev-parse "$UPSTREAM")
-    BASE=$(git merge-base @ "$UPSTREAM")
-
-    if [ $LOCAL = $REMOTE ]; then
-        :
-    elif [ $LOCAL = $BASE ]; then
-        pull-update
-    elif [ $REMOTE = $BASE ]; then
-        code .
-    else
-        code .
+        printf '{"text": "%s"}\n' ""
     fi
   '';
 in
@@ -61,10 +21,7 @@ in
         layer = "top";
         position = "top";
         height = 32;
-        modules-left = [
-          "clock"
-          "custom/updates"
-        ];
+        modules-left = [ "clock" ];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [
           "tray"
@@ -77,14 +34,6 @@ in
         "clock" = {
           format = "<span font='Google Sans Flex @wght=600,wdth=100,ROND=100'>{:%H:%M  %a., %d. %b.}</span>";
           tooltip = false;
-        };
-
-        "custom/updates" = {
-          interval = 60;
-          format = "{}";
-          exec = "${check-updates}";
-          on-click = "${update-button}";
-          return-type = "json";
         };
 
         "hyprland/workspaces" = {
@@ -297,30 +246,16 @@ in
         font-size: 14px;
       }
 
-      #custom-updates {
-        background: transparent;
-        color: rgb(193, 198, 213);
-        margin: 4px;
-        margin-left: 32px;
-      }
-
-      #custom-updates.needs-attention {
-        background: rgb(238, 103, 92);
-        color: rgb(96, 20, 16);
-        border-radius: 24px;
-        padding: 0px 14.5px 0px 9.5px;
-      }
-
       #tray {
-        background: rgb(193, 198, 213);
+        background-color: rgb(193, 198, 213);
         border-radius: 24px;
-        padding: 0px 12px;
+        padding: 2px 10px;
         margin: 4px;
         margin-right: 32px;
       }
 
       #tray > .needs-attention {
-        background: rgb(238, 103, 92);
+        background-color: rgb(238, 103, 92);
       }
 
       #bluetooth {
