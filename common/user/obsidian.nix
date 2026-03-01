@@ -415,4 +415,6 @@
       };
     };
   };
+
+  stylix.targets.obsidian.enable = false;
 }

@@ -1,17 +1,10 @@
 {
-  config,
-  pkgs,
-  lib,
-  ...
-}:
-
-{
   imports = [
-    ./fonts
     ./boot.nix
     ./exclude.nix
     ./flatpak.nix
     ./git.nix
+    ./gnome.nix
     ./local.nix
     ./networking.nix
     ./printing.nix
