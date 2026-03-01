@@ -17,6 +17,7 @@
     ./printing.nix
     ./sound.nix
     ./packages.nix
+    ./system.nix
     ./zsh.nix
   ];
 }
