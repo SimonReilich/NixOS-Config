@@ -18,7 +18,6 @@
   ++ (with pkgs; [
     roboto-flex
     roboto-serif
-    nerd-fonts.roboto-mono
-    material-design-icons
+    roboto-mono
   ]);
 }

@@ -34,8 +34,6 @@
 
         "SUPER_SHIFT, Right, movetoworkspace, r+1"
         "SUPER_SHIFT, Left, movetoworkspace, r-1"
-
-        "SUPER_SHIFT, W, exec, pkill waybar || waybar"
       ];
 
       binds = {

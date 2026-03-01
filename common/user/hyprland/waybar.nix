@@ -15,15 +15,12 @@
         modules-left = [ "clock" ];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [
-          "tray"
-          "pulseaudio"
-          "bluetooth"
           "network"
+          "pulseaudio"
         ];
 
         "clock" = {
           format = "{:%H:%M %a., %d. %b.}";
-          tooltip = false;
         };
 
         "hyprland/workspaces" = {
@@ -36,73 +33,21 @@
             urgent = "🞿";
           };
           on_click = "activate";
-          tooltip = false;
-        };
-
-        "tray" = {
-          icon-size = 16;
-          spacing = 10;
-        };
-
-        "pulseaudio" = {
-          format = "󰕾 {volume}%";
-          format-muted = "󰸈";
-          on-click = "pulsemixer --toggle-mute";
-          tooltip-format = "{desc}";
-        };
-
-        "bluetooth" = {
-          format = "󰂲";
-          format-connected = "󰂯 {device_alias}";
-          format-connected-battery = "󰥉 {device_alias} {device_battery_percentage}%";
-          tooltip-format = "{num_connections} connected";
-          tooltip-format-connected = "{num_connections} connected\n\n{device_enumerate}";
-          tooltip-format-enumerate-connected = "{device_alias}";
-          tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_battery_percentage}%";
+          tooltip = true;
+          tooltip-format = "{windows}";
         };
 
         "network" = {
-          format-wifi = "";
-          format-ethernet = "󰈀";
-          format-linked = "";
-          format-disconnected = "󰌙";
-          tooltip-format = "{ifname} via {gwaddr} 󰊗";
-          tooltip-format-wifi = "{essid} ({signalStrength}%) ";
-          tooltip-format-ethernet = "{ifname} ";
-          tooltip-format-disconnected = "Disconnected";
+          format-wifi = " {essid}";
+          format-ethernet = "󰈀 {ifname}: {ipaddr}/{cidr}";
+          format-linked = "󰈀 {ifname} (No IP)";
+          format-disconnected = " unconnected";
         };
 
-        "battery" = {
-          interval = 60;
-          format = "{capacity}% {icon}";
-          format-icons = {
-            default = [
-              "󰂎"
-              "󰁺"
-              "󰁻"
-              "󰁼"
-              "󰁽"
-              "󰁾"
-              "󰁿"
-              "󰂀"
-              "󰂁"
-              "󰂂"
-              "󰁹"
-            ];
-            charging = [
-              "󰢟"
-              "󰢜"
-              "󰂆"
-              "󰂇"
-              "󰂈"
-              "󰢝"
-              "󰂉"
-              "󰢞"
-              "󰂊"
-              "󰂋"
-              "󰂅"
-            ];
-          };
+        "pulseaudio" = {
+          format = " {volume}%";
+          format-muted = " muted";
+          on-click = "pulsemixer --toggle-mute";
         };
       };
 
@@ -118,7 +63,7 @@
           format = "{icon}";
           on-click = "activate";
           on-click-middle = "minimize";
-          icon-size = 36;
+          icon-size = 40;
         };
 
         "hyprland/window" = {
@@ -131,7 +76,7 @@
       * {
         border: none;
         border-radius: 0;
-        font-family: "Google Sans Flex", "Material Design Icons", "Roboto";
+        font-family: "Google Sans Flex, sans-serif";
         font-weight: 500;
       }
 
@@ -159,43 +104,8 @@
         color: rgb(193, 198, 213);
       }
 
-      #tray {
-        background-color: rgb(193, 198, 213);
-        border-radius: 24px;
-        padding: 2px 10px;
-        margin: 4px;
-      }
-
-      #tray > .needs-attention {
-        background-color: rgb(238, 103, 92);
-      }
-
-      #bluetooth {
-        margin-left: 16px;
-        margin-right: 0px;
-      }
-
-      #network {
-        margin-left: 16px;
-        margin-right: 0px;
-      }
-
-      #taskbar button {
-        border-radius: 100%;
-        margin: 4px;
-        transition: background 0.3s ease;
-      }
-
-      #taskbar button.active {
-        background: rgb(46, 48, 54);
-      }
-
       #taskbar button:hover {
-        background: rgb(46, 48, 54);
-      }
-
-      #taskbar button.urgent {
-        background: rgb(96, 20, 16);
+        background: transparent;
       }
 
       #workspaces button {
