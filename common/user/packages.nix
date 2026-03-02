@@ -19,6 +19,7 @@
     discord
     signal-desktop
     zulip
+    fractal
 
     # Creative
     musescore
