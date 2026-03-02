@@ -103,8 +103,8 @@ EOF
 
     shellAliases = {
       ls = "ls --color";
-      update = "(cd /home/simonr/.dotfiles && git add * && sudo (nixos-rebuild switch --flake /home/simonr/.dotfiles && nix-collect-garbage --delete-older-than 7d))";
-      pull-update = "(cd /home/simonr/.dotfiles && git add * && git pull && sudo (nixos-rebuild switch --flake /home/simonr/.dotfiles && nix-collect-garbage --delete-older-than 7d))";
+      update = "(cd /home/simonr/.dotfiles && git add * && sudo nixos-rebuild switch --flake /home/simonr/.dotfiles && sudo nix-collect-garbage --delete-older-than 7d)";
+      pull-update = "(cd /home/simonr/.dotfiles && git add * && git pull && sudo nixos-rebuild switch --flake /home/simonr/.dotfiles && sudo nix-collect-garbage --delete-older-than 7d)";
     };
 
     histSize = 10000;
