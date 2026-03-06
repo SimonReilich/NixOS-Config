@@ -105,7 +105,7 @@ EOF
       ls = "ls --color";
       update = "(cd /home/simonr/.dotfiles && git add * && sudo nixos-rebuild switch --flake /home/simonr/.dotfiles && sudo nix-collect-garbage --delete-older-than 7d)";
       pull-update = "(cd /home/simonr/.dotfiles && git add * && git pull && sudo nixos-rebuild switch --flake /home/simonr/.dotfiles && sudo nix-collect-garbage --delete-older-than 7d)";
-      n8n = "zen-beta localhost:46805 & ssh -L 5678:localhost:5678 vps";
+      n8n = "zen-beta localhost:5678 & ssh -L 5678:localhost:5678 vps";
       openclaw = "zen-beta localhost:46805 & ssh -L 46805:127.0.0.1:46805 vps";
     };
 
