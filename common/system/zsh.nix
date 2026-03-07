@@ -106,7 +106,6 @@ EOF
       update = "(cd /home/simonr/.dotfiles && git add * && sudo nixos-rebuild switch --flake /home/simonr/.dotfiles && sudo nix-collect-garbage --delete-older-than 7d)";
       pull-update = "(cd /home/simonr/.dotfiles && git add * && git pull && sudo nixos-rebuild switch --flake /home/simonr/.dotfiles && sudo nix-collect-garbage --delete-older-than 7d)";
       n8n = "zen-beta localhost:5678 & ssh -L 5678:localhost:5678 vps";
-      openclaw = "zen-beta localhost:59119 & ssh -L 59119:127.0.0.1:59119 vps";
     };
 
     histSize = 10000;
