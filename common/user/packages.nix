@@ -52,6 +52,7 @@
     eloquent
     gnome-network-displays
     morphosis
+    emblem
 
     # Customization
     adw-gtk3
