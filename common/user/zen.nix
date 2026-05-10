@@ -90,19 +90,19 @@
       };
       spacesForce = true;
       spaces = {
-        "Daily" = {
+        "Main" = {
           id = "fae7de7d-02f8-4a6a-b988-8c020febbd6d";
           icon = "🏠";
           position = 1000;
         };
-        "Uni" = {
+        "Study" = {
           id = "45f366af-65c6-4645-bbf1-32f79ed35870";
           icon = "🎓";
           position = 2000;
         };
         "Social" = {
           id = "c35c5646-1cdb-439b-9c95-c3e603bb1afc";
-          icon = "🫂";
+          icon = "📷";
           position = 3000;
         };
         "Dev" = {
@@ -110,9 +110,9 @@
           icon = "👾";
           position = 4000;
         };
-        "Content" = {
+        "Creative" = {
           id = "53e34b08-0c88-4ce0-a84d-d23056884bda";
-          icon = "🎥";
+          icon = "🎨";
           position = 5000;
         };
       };
