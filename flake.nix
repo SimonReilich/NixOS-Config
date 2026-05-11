@@ -131,11 +131,11 @@
           ];
         };
 
-        vps = nixpkgs.lib.nixosSystem {
+        server = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            ./vps/vps-config.nix
+            ./server/server-config.nix
           ];
         };
       };

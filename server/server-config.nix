@@ -1,11 +1,11 @@
 { pkgs, modulesPath, ... }:
 {
   imports = [
-    ./vps-hardware.nix
-  ];
+    ./system
+    ../common/config.nix
 
-  system.stateVersion = "25.11";
-  nix.settings.experimental-features = "flakes nix-command";
+    ./server-hardware.nix
+  ];
 
   # SSH
   services.openssh.enable = true;

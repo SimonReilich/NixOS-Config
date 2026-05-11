@@ -7,7 +7,7 @@
 
 {
   imports = [
-    ../common/home.nix
+    ../computer/home.nix
     ./user
   ];
 }

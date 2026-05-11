@@ -4,6 +4,7 @@
   imports = [
     ./system
     ../common/config.nix
+    ../computer/config.nix
     ./tablet-style.nix
 
     # Include the results of the hardware scan.

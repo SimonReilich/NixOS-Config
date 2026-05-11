@@ -12,19 +12,7 @@
 {
   imports = [
     ./system
-    ./style.nix
   ];
-
-  users.users.simonr = {
-    isNormalUser = true;
-    home = "/home/simonr";
-    extraGroups = [
-      "wheel"
-      "networkmanager"
-      "audio"
-    ];
-    shell = pkgs.zsh;
-  };
 
   # Prevent the new user dialog in zsh
   system.userActivationScripts.zshrc = "touch .zshrc";
