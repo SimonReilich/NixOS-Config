@@ -12,7 +12,13 @@
 {
   imports = [
     ./system
+    inputs.sops-nix.nixosModules.sops
   ];
+
+  sops.defaultSopsFile = ../secrets/secrets.yaml;
+  sops.defaultSopsFormat = "yaml";
+  
+  sops.age.keyFile = "~/.config/sops/age/keys.txt";
 
   # Prevent the new user dialog in zsh
   system.userActivationScripts.zshrc = "touch .zshrc";

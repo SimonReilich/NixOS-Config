@@ -1,5 +1,5 @@
 {
   imports = [
-    
+    ./forgejo-runner.nix
   ];
 }
