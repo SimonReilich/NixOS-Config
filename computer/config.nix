@@ -14,6 +14,8 @@
     ./system
     ./style.nix
   ];
+  
+  sops.age.keyFile = "~/.config/sops/age/keys.txt";
 
   users.users.simonr = {
     isNormalUser = true;

@@ -6,6 +6,8 @@
 
     ./server-hardware.nix
   ];
+  
+  sops.age.keyFile = "/root/.config/sops/age/keys.txt";
 
   # SSH
   services.openssh.enable = true;
