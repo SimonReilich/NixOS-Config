@@ -3,6 +3,5 @@
     ./git.nix
     ./local.nix
     ./packages.nix
-    ./zsh.nix
   ];
 }
