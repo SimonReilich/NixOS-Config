@@ -15,7 +15,7 @@
       tokenFile = config.sops.secrets.forgejo-runner-token.path;
       labels = [
         "nix-stable:docker://nixos/nix:latest"
-        "nixos-unstable:docker://nixos/nix:unstable"
+        "nix-unstable:docker://nixos/nix:unstable"
       ];
     };
   };
