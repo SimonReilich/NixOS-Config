@@ -5,7 +5,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     ghostty
-    gh
     direnv
     wl-clipboard
     libnotify

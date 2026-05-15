@@ -46,7 +46,6 @@
     gnome-solanum
     hieroglyphic
     ffmpeg
-    gemini-cli
     delineate
     eloquent
     gnome-network-displays
