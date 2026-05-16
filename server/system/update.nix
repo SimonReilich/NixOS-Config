@@ -17,7 +17,6 @@
     serviceConfig = {
       Type = "oneshot";
       ExecStart = ''
-        cd /root/nix-config && \
         ${pkgs.git}/bin/git pull && \
         ${pkgs.nixos-rebuild}/bin/nixos-rebuild switch --flake /root/nix-config#server
       '';
