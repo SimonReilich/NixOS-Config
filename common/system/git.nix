@@ -10,7 +10,7 @@
     enable = true;
     config = {
       user.name = "SimonReilich";
-      user.email = "simon.reilich@proton.me";
+      user.email = "accounts@sreilich.de";
       init.defaultBranch = "main";
       credential = {
         helper = "manager";
